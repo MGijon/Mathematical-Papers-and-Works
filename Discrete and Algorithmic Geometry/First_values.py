@@ -27,7 +27,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.plot(x, lower_bound, color = 'blue', label = 'Lower Bounds')
 ax.plot(x, upper_bound, color = 'red', label = 'Upper Bounds')
-plt.title(r'Comparation between lowe and upper bounds for $K_{n}$')
+plt.title(r'Comparation between lower and upper bounds for $K_{n}$')
 ax.set_xlabel(r'Value of $n$')
 ax.set_ylabel('Bounds')
 plt.legend()
@@ -47,10 +47,20 @@ ax.scatter(x[:20], lower_bound[:20], color = 'lightblue', label = 'Lower Bounds'
 ax.scatter(x[:20], upper_bound[:20], color = 'pink', label = 'Upper Bounds')
 
 ax.scatter([i for i in range(1, len(known_values) + 1)], known_values, marker = '^', color = 'red', label = 'Known values')
+
 plt.title(r'Comparation between lowe and upper bounds for $K_{n}$')
 ax.set_xlabel(r'Value of $n$')
 ax.set_ylabel('Bounds')
+
+#plt.setp(xticklabels = [i for i in range(1, len(known_values) + 1)])
 plt.legend()
 plt.show()
 
 
+
+
+
+# cosas por hacer:
+# 1. arreglar título
+# 2. cambiar etiquetas en los ejes
+# 3. añadir punto ímite con su correspondiente flechita cuqui
