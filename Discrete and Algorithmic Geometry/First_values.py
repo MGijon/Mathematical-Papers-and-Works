@@ -61,9 +61,25 @@ plt.show()
 
 
 
+##
+## Comparation between lower and upper bound
+## Enfasis on known values with more detail
+## =========================================
+
+
+fig, ax = plt.subplots()
+
+ax.scatter(x[:16], lower_bound[:16], color = 'lightblue', label = 'Lower Bounds')
+ax.scatter(x[:16], upper_bound[:16], color = 'pink', label = 'Upper Bounds')
+ax.scatter([i for i in range(1, len(known_values) + 1)], known_values, marker = '^', color = 'red', label = 'Known values')
+
+
+ax.set_title(r'Known values of lower and upper bounds for $\bar \theta (K_{n})$')
+ax.set_xticks([i for i in range(1, len(known_values) + 1)])
+ax.set_xticklabels([str(i) for i in range(1, len(known_values) + 1)])
+
+plt.show()
 
 
 # cosas por hacer:
-# 1. arreglar título
-# 2. cambiar etiquetas en los ejes
 # 3. añadir punto ímite con su correspondiente flechita cuqui
