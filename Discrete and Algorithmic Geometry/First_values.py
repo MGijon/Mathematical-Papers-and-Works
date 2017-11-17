@@ -78,6 +78,16 @@ ax.set_title(r'Known values of lower and upper bounds for $\bar \theta (K_{n})$'
 ax.set_xticks([i for i in range(1, len(known_values) + 1)])
 ax.set_xticklabels([str(i) for i in range(1, len(known_values) + 1)])
 
+plt.annotate(r'Last known value of $\bar \theta (K_{n})$ is for  $n = 14$', xy = (14, known_values[-1]),
+             xytext = (7, known_values[-1] - 0.6), arrowprops = dict(facecolor = 'black', shrink = 0.05))
+
+ax.set_xlabel(r'Value of $n$')
+ax.set_ylabel('Bound')
+
+#plt.setp(xticklabels = [i for i in range(1, len(known_values) + 1)])
+plt.legend()
+plt.savefig('Known common values 2.png')
+
 plt.show()
 
 
