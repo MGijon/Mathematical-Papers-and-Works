@@ -1,0 +1,258 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+
+
+\title{Graph Theory .- Spectral Graph Theory}
+\author{Manuel Gijón Agudo}
+\date{November 2017}
+
+\usepackage{amsmath}
+\usepackage{verbatim} % comentarios
+
+\usepackage{fancyhdr}
+\usepackage{tikz}   
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,calc,shapes.geometric}
+
+\textwidth 150mm
+\oddsidemargin 4.6mm                
+\evensidemargin = \oddsidemargin
+\textheight 235mm
+\topmargin -3mm
+\headsep 2ex
+
+% Cabezera:
+\pagestyle{fancy}
+\lhead{
+\small \itshape \sffamily
+Graph Theory}
+
+\rhead{
+\thepage}
+
+\cfoot{Manuel Gijón Agudo}
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\newtheorem{teo}{Theorem}[chapter] 
+
+\maketitle
+
+\section*{Exercise 10, Part 2}
+
+
+Let $G\Box H$ denote the cartesian product of $G$ and $H$. The vertex set is $V(G) \times V(H)$ and $(x, y) \sim (z, y)$ if one of the coordinates agree and the ohter one is a pair of adyacent vertices.
+
+\begin{itemize}
+    \item (a) Show that the Laplace eigenvalues of $G \Box H$ are precisely $\mu_{i} (G) + \mu_{j} (H)$, for all $i, j$.
+    \item (b) The n-cube $Q_{n}$ is defined as $Q_{1} = K_{2}$ and $Q_{n} = K_{2} \Box Q_{n-1}$ for $n \ge 2$.  Determine $\mu_{2}(Q_{n})$.
+
+\end{itemize}
+\par
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{(a)}
+
+\subsubsection*{Using the Kronecker product}
+
+We know that $L(G) X_i = \lambda_i X_i$ and $L(H) Y_j = \mu_j Y_j$, then
+
+\begin{align}
+\nonumber L(G \Box H) (X_i \otimes Y_j) & = (L(G) \otimes I_m + I_n \otimes L(H)) (X_i \otimes Y_j) \\\nonumber &  = L(G) X_i \otimes I_m Y_j + I_n X_i \otimes L(H) Y_j \\ \nonumber &   = \lambda_i X_i \otimes Y_j + \mu_j X_i \otimes Y_j  \\ \nonumber & = (\lambda_i + \mu_j)(X_i \otimes Y_j)\\ \nonumber
+\end{align}
+
+\subsubsection*{Directly}
+
+\teo{Fiedler (1973) \footnote{Miroslav Fiedler, \textit{``Algebraic connectivity of graphs''}, Czechoslovak Mathematical Journal, Vol.23 (1973), No.2, 298-305}:} Let be $\{ \lambda_1, ..., \lambda_n\}$ and $\{x_1, ..., x_n\}$ and $\{\mu_1, ..., \mu_m\}$ and $\{y_1, ..., y_m\}$ the sets of Laplacian  eigenvalues and Laplacian eigenvectors of $G$ and $H$ respectively. Then, for each $1 \leq i \leq n$ and $1 \leq j \leq m$, $G \Box H$ has an Laplacian eigenvector $z$ of eigenvalue $\lambda_i + \mu_j$ such that $z(u,v) = x_i(u) y_j(v)$.
+
+
+\noindent \underline{\textit{Proof:}} Let $L$ denote the Laplacian of $G \Box H$, $d_u$ the degree of $u$ in $G$ and $d_v$ the degree of $v$ in $H$. Let $E$ be the set of edges of $G$ and $F$ the set of edges for $H$.
+
+\begin{align}
+\nonumber (Lz)(u, v) & = (d_u + d_v)x_i(u)y_j(v) - \sum_{(u,u_2) \in E} x_i(u_2)y_j(v) - \sum_{(v,v_2) \in F} x_i(u)y_j(v_2) \\\nonumber &  = \Big( d_u ( x_i(u)y_j(v)  ) - \sum_{(u,u_2) \in E} x_i(u_2)y_j(v) \Big) + \Big( d_v ( x_i(u)y_j(v)  )  - \sum_{(v,v_2) \in F} x_i(u)y_j(v_2) \Big) \\ \nonumber &   = y_j(v) \Big(d_u  x_i(u) - \sum_{(u,u_2) \in E} x_i(u_2) \Big) + x_i(u) \Big(d_v y_j(v) - \sum_{(v,v_2) \in F} y_j(v_2) \Big)  \\ \nonumber & = y_j(v) \lambda_i x_i(u) + x_i(u) \mu_j y_j(v) = (\lambda_i + \mu_j)(x_i(u)y_j(v))\\ \nonumber
+\end{align}
+
+
+
+$\blacksquare$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{(b)}
+
+\noindent First of all observe that:
+
+\begin{align}
+\nonumber Q_n & = K_2 \Box Q_{n-1}\\\nonumber &  = K_2 \Box (K_2 \Box Q_{n-2}) \\ \nonumber & = ... \\ \nonumber &   = (K_2 \Box K_2)^{n-1} \Box Q_1 \\ \nonumber & = (K_2 \Box K_2)^{n}\\ \nonumber
+\end{align}
+
+\noindent We are going to use the previous resoult, so we need to calculate the eigenvalues of $K_2$. The Laplacian matrix of $K_2$ is:
+
+\begin{align}
+\nonumber L_{K_2} = L_{Q_1} & = D_{Q_1} - A_{Q_1} \\\nonumber &  = \begin{bmatrix}
+    1 & 0\\
+    0 & 1\\
+\end{bmatrix} -
+\begin{bmatrix}
+    0 & 1\\
+    1 & 0\\
+\end{bmatrix}\\  & = 
+\begin{bmatrix}
+    1 & -1\\
+    -1 & 1\\
+\end{bmatrix}
+\\ \nonumber 
+\end{align}
+
+\noindent We calculate the eigenvalues and we get $\mu_1 (Q_1) = 0$ y $\mu_2 (Q_1) = 2$.
+
+\noindent It's possible but ot necessary to compute all the eigenvelues for every $Q_n$, but now we can see how the secuence of eigenvalues starts ($0, 2, 4, ...$). So for every $n$ the answer is $\mu_2(Q_n) = 2$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Appendix}
+
+\subsection*{(a)}
+\noindent\textbf{Definition 1. Kronecker product: } Let $\mathcal{A}$ be a $m \times n$ matrix and $\mathcal{B}$ a $p \times q$ matrix, then the Kronecker matrix $A \otimes B$ is the $mp \times nq$ block matrix:
+
+$$
+\mathcal{A} \otimes \mathcal{B} := 
+\begin{pmatrix}
+a_{1,1} \mathcal{B} & a_{1,2} \mathcal{B} & \cdots & a_{1,n} \mathcal{B}  \\
+a_{2,1} \mathcal{B} & a_{2,2} \mathcal{B} & \cdots & a_{2,n}  \mathcal{B} \\
+\vdots & \vdots & \ddots & \vdots\\
+a_{m,1} \mathcal{B} & a_{m,2} \mathcal{B} & \cdots & a_{m,n}  \mathcal{B} \\
+\end{pmatrix}
+$$
+
+\noindent\textbf{Observation 1: } Of the set of properties of the Kronecker product, we will be interesting in two in partiular.
+\begin{itemize}
+\item \textbf{Kronecker sum:} If $\mathcal{A}$ is a $n \times n$ matrix and $\mathcal{B}$ is a $m \times m$ matrix:
+$$
+\mathcal{A} \oplus \mathcal{B} = \mathcal{A} \otimes \mathcal{I}_{m} + \mathcal{I}_{n} \otimes \mathcal{B}
+$$
+\item \textbf{Mixed-product property:}
+$$
+(\mathcal{A} \otimes \mathcal{B})(\mathcal{C} \otimes \mathcal{D}) = (\mathcal{A}\mathcal{C}) \otimes (\mathcal{B}\mathcal{D}) 
+$$
+\end{itemize}
+
+
+\subsection*{(b)}
+
+\noindent We can generalize the form of the Laplacian matrix for the hypercube from (1) in the next way:
+
+\begin{align}
+\nonumber L_{Q_2} = L_{K_{2} \Box K_{2}} & = D_{Q_2} - A_{Q_2} =  D_{K_{2} \Box K_{2}} - A_{K_{2} \Box K_{2}}\\ &  = \begin{bmatrix}
+    2 & 0 & 0 & 0\\
+    0 & 2 & 0 & 0\\
+    0 & 0 & 2 & 0\\
+    0 & 0 & 0 & 2\\
+\end{bmatrix} -
+\begin{bmatrix}
+    0 & 1 & 1 & 0\\
+    1 & 0 & 0 & 1\\ 
+    1 & 0 & 0 & 1\\
+    0 & 1 & 1 & 0\\
+\end{bmatrix}\\\nonumber  & = 
+\begin{bmatrix}
+    2 & -1 & -1 & 0\\
+    -1 & 2 & 0 & -1\\
+    -1 & 0 & 2 & -1\\
+    0 & -1 & -1 & 2\\
+\end{bmatrix}
+\\ \nonumber 
+\end{align}
+
+\noindent Observe the block structure of the matix:
+
+\begin{align}
+\nonumber (2) & = \begin{bmatrix}
+    2I & 0\\
+    0 & 2I\\
+\end{bmatrix} -
+\begin{bmatrix}
+    A_{Q_1} & I\\
+    I & A_{Q_1}\\
+\end{bmatrix}\\\nonumber  & = 
+\begin{bmatrix}
+    2I - A_{Q_1} & -I\\
+    -I & 2I - A_{Q_1}\\
+\end{bmatrix}
+\\ \nonumber 
+\end{align}
+
+\noindent In general we have:
+
+\begin{align}
+\nonumber L_{Q_n} = D_{Q_n} - A_{Q_n} & = \begin{bmatrix}
+    nI & 0\\
+    0 &  nI\\
+\end{bmatrix} -
+\begin{bmatrix}
+    A_{Q_{n-1}} & I\\
+    I & A_{Q_{n-1}}\\
+\end{bmatrix}\\  & = 
+\begin{bmatrix}
+    nI - A_{Q_{n-1}} & -I\\
+    -I & nI - A_{Q_{n-1}}\\
+\end{bmatrix}
+\\ \nonumber 
+\end{align}
+
+\noindent Since $Q_n$ is $n$-regular, then $D_n = n I$ and so:
+$$
+L_{Q_n} = D_{Q_n} - A_{Q_n} = nI - A_{Q_n} 
+$$
+
+\noindent Then for $Q_{n-1}$ we have:
+
+\begin{align}
+\nonumber L_{Q_{n-1}} & = (n-1) I - A_{n-1}\\\nonumber & = n I - I - A_{n-1} \\ & \Rightarrow L_{Q_{n-1}} + I = n I - A_{n-1}
+\\ \nonumber 
+\end{align}
+
+\noindent Applying (4) in (3) we have a recursive formula for the Laplacian matrix of the hypercube:
+
+$$ L_{Q_n}
+\begin{bmatrix}
+    L_{Q_{n-1}} + I & - I \\
+    - I & L_{Q_{n-1}} + I
+\end{bmatrix}
+$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+$$
+(Lz)(u, v)  = (d_u + d_v)x_i(u)y_j(v) - \sum_{(u,u_2) \in E} x_i(u_2)y_j(v) - \sum_{(v,v_2) \in F} x_i(u)y_j(v_2) \\ 
+$$ 
+$$
+  = \Left( d_u ( x_i(u)y_j(v)  ) - \sum_{(u,u_2) \in E} x_i(u_2)y_j(v) \Right) + \Left( d_v ( x_i(u)y_j(v)  )  - \sum_{(v,v_2) \in F} x_i(u)y_j(v_2) \Right) \\ 
+$$
+$$
+  = y_j(v) \Left(d_u  x_i(u) - \sum_{(u,u_2) \in E} x_i(u_2) \Right) + x_i(u) \Left(d_v y_j(v) - \sum_{(v,v_2) \in F} y_j(v_2) \Right)\\
+$$
+$$
+  = y_j(v) \lambda_i x_i(u) + x_i(u) \mu_j y_j(v) = (\lambda_i + \mu_j)(x_i(u)y_j(v))
+$$
+
+
+\noindent We are going to use also the resoult that says that if we have a graph $G$ and a Laplacian spectrum $\mu_0 \leq \mu_1 \leq ... \leq \mu_n$ then:
+\begin{itemize}
+    \item $\mu_0 = 0$ and has eigenvector $(1, 1, ..., 1)$.
+    \item If $G$ is connected then $\mu_1 > 0$.
+    \item If G is $r$-regular then $\mu_i = r - \lambda_i$ where $\lambda_i$ is the i-th eigenvalue of $A(G)$ (listed in nonincreasing order.
+\end{itemize}
+
+\noindent In our case $Q_n$ is a $n$-regular graph and spectrum of $A(K_2) = \{ -1, 1 \}$.
