@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+
+
+\title{Graph Theory .- Coloring}
+\author{Manuel Gijón Agudo}
+\date{October 2017}
+
+\usepackage{amsmath}
+\usepackage{verbatim} % comentarios
+
+\usepackage{fancyhdr}
+\usepackage{tikz}   
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,calc,shapes.geometric}
+
+\textwidth 150mm
+\oddsidemargin 4.6mm                
+\evensidemargin = \oddsidemargin
+\textheight 235mm
+\topmargin -3mm
+\headsep 2ex
+
+% Cabezera:
+\pagestyle{fancy}
+\lhead{
+\small \itshape \sffamily
+Graph Theory}
+
+\rhead{
+\thepage}
+
+\cfoot{Manuel Gijón Agudo}
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\newtheorem{teo}{Theorem}[chapter] 
+
+\maketitle
+
+\section*{Exercise 13}
+\texttt{Prove that a regular graph of odd order satisfies $\chi\' ( \mathcal{G} ) = \Delta (\mathcal{G}) + 1$ (namely, $\mathcal{G}$ is of class two).}
+\par
+
+\noindent\textbl{proof:}
+
+\noindent\textit{Step 1.} Every regular graph of odd order is overfull.
+
+
+
+\noindent A graph is overfull if:
+$$
+|E| = m > \Delta(\mathcal{G}) \left\lfloor{\frac{n}{2}}\right\rfloor =  \Delta(\mathcal{G}) \left\lfloor{\frac{|V|}{2}}\right\rfloor
+$$
+We apply the Handshaking lemma:
+$$
+\sum_{v \in V} d(v) = 2 |E| = 2 m
+$$
+We use that in a regular graph the degree of all vertices is the same.
+$$
+\sum_{v \in V} d(v) = n d(v) = n \Delta (\mathcal{G}) = 2 m \Rightarrow m = \Delta (\mathcal{G})  \frac{n}{2}
+$$
+
+
+\noindent\textit{Step 2.} If $\mathcal{G}$ is overfull then is of Class 2.
+
+
+\noindent\textbl{proof:}
+\noindentWe make a proof by contradiccion.
+
+\noindent The contrary of the fact that every graph like this is in a class is just to find one that is not (so, it is in class 1, what means that $\chi\' ( \mathcal{G} ) = \Delta (\mathcal{G})$.
+
+\noindent Let $\mathcal{G}$ be a graph whit $n$ vertices and $m$ edges. $\mathcal{G}$ is an overall graph ($|E| = m > \left\lfloor{\frac{n}{2}}\right\rfloor$). 
+
+\noindent Then any  $\Delta (\mathcal{G})$-coloring of edges partitions the set of edges
+into $\Delta (\mathcal{G})$ independent subsets. But the number of edges in each independent subset can not be larger than $\left\lfloor{\frac{n}{2}}\right\rfloor$, since otherwise two of these edges would be adjacent.
+
+\noindent It follows that $m \leq \Delta (\mathcal{G}) \left\lfloor{\frac{n}{2}}\right\rfloor $ leading us to a contradiction.
+
+\noindent$\blacksquare$
+
+
+
+
+    
+\newpage
+\section*{Appendix}
+
+
+\noindent\textbf{Definition.1 }Let $\mathcal{G} = (V,E)$ be a simple graph, a \textit{proper edge-coloring} of it is a map $c : E \rightarrow \{1, ..., k\}$ such that two incident edges recive distinct colors.
+
+
+\noindent\textbf{Definition.2 }A \textit{regular graph} is a graph that has $d(x) = N(x)  \forall x \in V$.
+
+\noindent\textbf{Observation.1 }In a regular graph we have $\Delta(\mathcal{G}) = \delta (\mathcal{G}) = N(x)$  $ \forall x \in V$
+
+
+\noindent\textbf{Definition.2 } The \textit{edge-chromatic number} $\chi \' (\mathcal{G})$ of a graph $\mathcal{G}$ is the minimum positive integer $k$ for which $\mathcal{G}$ admits a proper $k$-edge coloring.
+
+
+\noindent\textbf{Definition.3 } A graph $\mathcal{G}$ is called \textit{overfull} if:
+$$
+|E| = m > \Delta(\mathcal{G}) \left\lfloor{\frac{n}{2}}\right\rfloor =  \Delta(\mathcal{G}) \left\lfloor{\frac{|V|}{2}}\right\rfloor
+$$
+
+\begin{teo} \textbf{Vizing (1964)}:
+The edges of every simple undirected graph may be colored using a number of colors no bigger than $\Delta (\mathcal{G}) + 1$, the maximun degree of the graph plus one. The lower bound $\Delta (\mathcal{G}) \le \chi \' (\mathcal{G})$ is trivial.
+
+\noindent So, we can divide the graps into two categories, \textit{class 1} (their have an edge-chromatic numbar equal to $\Delta (\mathcal{G})$) and \textit{class 2} (when it is equal to $\Delta (\mathcal{G}) + 1$).
+\end{teo}
+
+
+
+
+\end{document}
+
+# https://math.stackexchange.com/questions/2175511/prove-k-regular-graph-with-odd-numbe#r-of-vertices-has-chig-geq-k1
+
+# http://web.iyte.edu.tr/~tinabeseri/tina-tez.pdf
