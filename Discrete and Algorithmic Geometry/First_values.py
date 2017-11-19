@@ -16,6 +16,7 @@ upper_bound = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6,
 
 
 known_values = [lower_bound[i] for i in range(0, len(lower_bound)) if lower_bound[i] == upper_bound[i]]
+X_known_values = [i+1 for i in range(0, len(lower_bound)) if lower_bound[i] == upper_bound[i]]
 
 ## Draw the grafics
 
@@ -45,10 +46,13 @@ plt.show()
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.scatter(x[:20], lower_bound[:20], color = 'lightblue', label = 'Lower Bounds')
-ax.scatter(x[:20], upper_bound[:20], color = 'pink', label = 'Upper Bounds')
+#ax.scatter(x[:20], lower_bound[:20], color = 'lightblue', label = 'Lower Bounds')
+#ax.scatter(x[:20], upper_bound[:20], color = 'pink', label = 'Upper Bounds')
 
-ax.scatter([i for i in range(1, len(known_values) + 1)], known_values, marker = '^', color = 'red', label = 'Known values')
+ax.plot(x[:20], lower_bound[:20], color = 'lightblue', label = 'Lower Bounds')
+ax.plot(x[:20], upper_bound[:20], color = 'pink', label = 'Upper Bounds')
+
+ax.scatter(X_known_values, known_values, marker = '^', color = 'red', label = 'Known values')
 
 plt.title(r'Known values of lower and upper bounds for $\bar \theta (K_{n})$')
 ax.set_xlabel(r'Value of $n$')
@@ -69,16 +73,18 @@ plt.show()
 
 fig, ax = plt.subplots()
 
-ax.scatter(x[:16], lower_bound[:16], color = 'lightblue', label = 'Lower Bounds')
-ax.scatter(x[:16], upper_bound[:16], color = 'pink', label = 'Upper Bounds')
-ax.scatter([i for i in range(1, len(known_values) + 1)], known_values, marker = '^', color = 'red', label = 'Known values')
+#ax.scatter(x[:16], lower_bound[:16], color = 'lightblue', label = 'Lower Bounds')
+#ax.scatter(x[:16], upper_bound[:16], color = 'pink', label = 'Upper Bounds')
+ax.plot(x[:16], lower_bound[:16], color = 'lightblue', label = 'Lower Bounds')
+ax.plot(x[:16], upper_bound[:16], color = 'pink', label = 'Upper Bounds')
+ax.scatter(X_known_values, known_values, marker = '^', color = 'red', label = 'Known values')
 
 
 ax.set_title(r'Known values of lower and upper bounds for $\bar \theta (K_{n})$')
-ax.set_xticks([i for i in range(1, len(known_values) + 1)])
-ax.set_xticklabels([str(i) for i in range(1, len(known_values) + 1)])
+ax.set_xticks([i for i in X_known_values])
+ax.set_xticklabels([str(i) for i in X_known_values])
 
-plt.annotate(r'Last known value of $\bar \theta (K_{n})$ is for  $n = 14$', xy = (14, known_values[-1]),
+plt.annotate(r'Last known value of $\bar \theta (K_{n})$ is for  $n = 16$', xy = (16, known_values[-1]),
              xytext = (7, known_values[-1] - 0.6), arrowprops = dict(facecolor = 'black', shrink = 0.05))
 
 ax.set_xlabel(r'Value of $n$')
