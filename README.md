@@ -5,15 +5,15 @@ Colection of exercises, papers and presentations about mathematical (or related)
 
 1. **TFG**:
 
-    cosas varias
+    Final degree work. 
 
 2. **Graph Theory**:
 
-    cosas varias
+    Exercises.
 
 3. **Discrete and Algorithmic Geometry**: 
 
-    rellenar con mierdas varias
+    Final presentation of a peper about graphical thickness in graphs.
 
 
 ***
