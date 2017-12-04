@@ -7,19 +7,52 @@
 \usepackage{graphicx}
 \usepackage[spanish]{babel} 
 
+\usepackage{fancyhdr}
+\usepackage{tikz}   
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,calc,shapes.geometric}
+
+\textwidth 150mm
+\oddsidemargin 4.6mm                
+\evensidemargin = \oddsidemargin
+\textheight 235mm
+\topmargin -3mm
+\headsep 2ex
+
+\pagestyle{fancy}
+\lhead{
+\small \itshape \sffamily
+Information Theory}
+
+\rhead{
+\thepage}
+
+\cfoot{Manuel Gijón Agudo}
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+
 \title{Information Theory \thanks{Chapter 2 in Crypytography class in Master's degree at UPC}}
-\author{Manuel Gij�n Agudo }
+\author{Manuel Gijón Agudo }
 \date{September 2017 - January 2018}
+
 
 \begin{document}
 
 	\begin{titlepage}
 		\maketitle{} \newpage
 		
-		Sections and stuff
+		\tableofcontents
+		\newpage
 		
-		\inputencoding{utf8}
-
+		\section{Introduction}
+		\noindent\textbf{Definition 	1: Information} the information coveyed by a source is a function $I:S  \rightarrow [ 0, \infty ) $ where $S$ is a \textbf{source} \footnote{A \textbf{source} is a finite set $S$ together with a sequence of random variables $X_i$ whose range is $S$} with the properties:
+		
+		\begin{itemize}
+			\item $I(s_i)$ is a decreasing function of the propability $p_i$, with $I(s_i) = 0$ if $p_i = 1$.
+			\item $I(s_i s_j) = I(s_i) + I(s_j)$
+		\end{itemize}
+		
 	\end{titlepage}
 
 \end{document}
