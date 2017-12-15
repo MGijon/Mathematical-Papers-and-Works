@@ -47,7 +47,7 @@ Graph Theory}
 % ENUNCIADO
 \begin{itemize}
     \item (a) Show that the mixing rate of the $n$-cube with a loop at every vertex is $(n-1)/n + 1$ (considering adding loops to every vertex).
-    \item (b) What is the number of steps of a random graph in $Q_{4}$ such that the propability of being at a vertex is $1/16 \pm 10^{-3}$?
+    \item (b) What is the number of steps of a random graph in $Q_{4}^{L}$ ($Q_4$ with a loop at every vertex) such that the propability of being at a vertex is $1/16 \pm 10^{-3}$?
 \end{itemize}
 
 \noindent
@@ -83,34 +83,41 @@ Graph Theory}
 
 \subsection*{(b)}
 
-\noindent We are going to use an equality that appears in the demostration of the theorem 1.3.
+\noindent The graph is $5$-regular, so $d(i) = 5 (\forall i)$
 
-$$
-p_{k}(i, j) = \pi(j) + \sum_{l = 2}^{n} \lambda_{l}^{k}(v_l)_i (v_l)_j \sqrt{\frac{d(i)}{d(j)}}
-$$
-
-\noindent We know that the stationary distribution in $Q_4$ is $\pi = \overbrace{(1/16, ..., 1/16)}^{16 \text{ times}}$
-
-\noindent The eigenvalues are (by exercise 10, second part in spectral graph theory): $0, \pm 2, \pm 4, \pm 6, \pm 8, \pm 10, \pm 12, \pm 14, \pm 16$.
-
-\noindent The graph is $4$-regular, so $d(i) = 4 (\forall i)$.
-
-\noindent We focus on the second term:
+\noindent We know that the stationary distribution in $Q_4$ is $\pi = \overbrace{(1/16, ..., 1/16)}^{16 \text{ times}}$.
 
 \begin{align}
-     \nonumber \pi = (d(1)/2m, ..., d(n)/2m) & = (4/2m, ..., 4/2m) \\ \nonumber & = (1/16, ..., 1/16) \\  \Rightarrow \frac{1}{2m} = \frac{1}{16} \Rightarrow  m = 32\\ \nonumber
+     \nonumber \pi = (d(1)/2m, ..., d(n)/2m) & = (5/2m, ..., 5/2m) \\ \nonumber & = (1/16, ..., 1/16) \\  \Rightarrow \frac{5}{2m} = \frac{1}{16} \Rightarrow  m = \frac{80}{2} = 40\\ \nonumber
 \end{align}
+
+\noindent The eigenvalues are (by exercise 10, second part in spectral graph theory): $0, \pm 2, \pm 4, \pm 6, \pm 8, \pm 10, \pm 12, \pm 14, \pm 16$. In this case the second largest eigenvalue is, by (a), $2/3$.
+
+\noindent Remind that $(v_{1}^{T}) = (\sqrt{d(1)/2m}, ..., \sqrt{d(n)/2m})$.
+
 \begin{align}
-     (v_l)_i (v_l)_j = \frac{4}{2m} = \frac{1}{16}
+     (v_l)_i (v_l)_j = \frac{d(i)}{2m} = \frac{5}{80} = \frac{1}{16}
+\end{align}
+
+
+\noindent We are going to use an inequality that appears in the demostration of the theorem 1.4.
+
+\begin{align}
+|p_{k}(i, j) - \pi(j) |^{1/k} \leq \lambda \left| \sum_{l = 2}^{n} (v_l)_i (v_l)_j \sqrt{\frac{d(i)}{d(j)}} \right| ^{1/k}    
+\end{align}
+
+
+\noindent We use (1), (2) and the expresion of the eigenvalue.
+
+\begin{align}
+    \nonumber \left| \frac{1}{16} \pm 10^{-3} - \frac{1}{16} \right|^{1/k} = \left|10^{-3} \right|^{1/k} & \leq \lambda \left| 15 \frac{1}{16} \right| ^{1/k} \\ \nonumber & \leq \lambda  \\ \nonumber
+\end{align}
+
+\begin{align}
+    10^{-3} \leq \lambda^k = \left( \frac{2}{3} \right)^k
 \end{align}
  
-\noindent We use (1), (2) and the general expresion of the eigenvalues.
-
-\begin{align}
-    \nonumber | \sum_{l = 2}^{n} \lambda_{l}^{k}(v_l)_i (v_l)_j \sqrt{\frac{d(i)}{d(j)}} | & = | \sum_{l = 2}^{n} \lambda_{l}^{k}(v_l)_i (v_l)_j | \\ \nonumber & =   \frac{1}{16} | \sum_{l = 2}^{n} \lambda_{l}^{k} | \\ \nonumber & \leq \frac{1}{16} \sum_{l = 2}^{n} | \lambda_{l}^{k} | \\ \nonumber & \leq 10  \frac{3^k}{4^{k+2}}\\ \nonumber
-\end{align}
- 
-\noindent With $k = 23$ steps the resoult is equal to $0.0008361594 = 8.361594 * 10^{-4}$.
+\noindent With $k = 18$ steps the result is equal to $0.0006766395 = 6.766395 * 10^{-4}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -120,7 +127,7 @@ $$
 
 \noindent Let $K^{L}_{2} = Q^{L}_{1}$ be the graph $K_2$ with a loop at every vertex. Observe that this is a $2$-regular graph.
 
-\noindent For this graph, the adyacency matrix $A^{L}$ is: 
+\noindent For this graph, the adjacency matrix $A^{L}$ is: 
 $$
 A^{L}_{1} = 
     \begin{pmatrix}
@@ -129,9 +136,9 @@ A^{L}_{1} =
     \end{pmatrix}
     = A_{1} + I_{2}
 $$ 
-\noindent ,where $A_{1}$ is the adyacency matrix of $K_2 = Q_1$ and $I_2$ the identity matrix of dimension $2$.
+\noindent ,where $A_{1}$ is the adjacency matrix of $K_2 = Q_1$ and $I_2$ the identity matrix of dimension $2$.
 
-\noindent In order to realize the structure of the adyacency matrix for any dimension, let's check the matrix for $K^{L}_{2} \Box K^{L}_{2} = Q^{L}_{2}$:
+\noindent In order to realize the structure of the adjacency matrix for any dimension, let's check the matrix for $K^{L}_{2} \Box K^{L}_{2} = Q^{L}_{2}$:
 
 $$
 A^{L}_{2} = 
@@ -149,9 +156,9 @@ A^{L}_{2} =
     = A_{2} + I_{2^2}
 $$ 
 
-\noindent ,where $A_{2}$ is the adyacency matrix of $Q_2$ and $I_{2^2}$ the identity matrix of dimension $2^2$.
+\noindent ,where $A_{2}$ is the adjacency matrix of $Q_2$ and $I_{2^2}$ the identity matrix of dimension $2^2$.
 
-\noindent So, the structure of the adyacency matrix of $A^{L}_{n}$ will be the next one:
+\noindent So, the structure of the adjacency matrix of $A^{L}_{n}$ will be the next one:
 
 $$
 A^{L}_{n} = 
@@ -162,10 +169,10 @@ A^{L}_{n} =
     = A_{n} + I_{2^n}
 $$ 
 
-\noindent ,where $A_{n}$ is the adyacency matrix of $Q_n$ and $I_{2^{n}}$ the identity matrix of dimension $2^n$.
+\noindent ,where $A_{n}$ is the adjacency matrix of $Q_n$ and $I_{2^{n}}$ the identity matrix of dimension $2^n$.
 
 
-\noindent Now we have to remind that the Laplacian Matrix of a graph is defined as $L = D - A$, and also the main resoult of the exercise 10 of the second part of the chapter dedicated to Spectral Graph Theory: the serie of eigenvalues for the Laplacian matrix of the hypercube starts with $0, 2, 4, 6, ...$. So the first non-zero eigenvalue is $2$ for all dimensions.
+\noindent Now we have to remind that the Laplacian Matrix of a graph is defined as $L = D - A$, and also the main result of the exercise 10 of the second part of the chapter dedicated to Spectral Graph Theory: the serie of eigenvalues for the Laplacian matrix of the hypercube starts with $0, 2, 4, 6, ...$. So the first non-zero eigenvalue is $2$ for all dimensions.
 
 \end{document}
 
