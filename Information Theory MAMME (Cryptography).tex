@@ -50,6 +50,7 @@ Information Theory}
 					
 		\section{Basic knowledge of coding}
 
+		\subsection{Introduction}
 \noindent\textbf{Definition 	1:}  a \textbf{source} is a finite set $\mathcal{S}$ together with a set of random variables ($X_1, X_2, ...$) whose range is $\mathcal{S}$.
 
 If $P(X_n = \mathcal{S}_i)$ only depends on $i$ and not on $n$ then we say the source is \textbf{stationary} and if the $X_n$ are independent then it's \textbf{memoryless}.
@@ -60,12 +61,35 @@ Insert example here
 
 If $|T| = r$ then $\mathfrak{C}$ is a \textbf{$r$-ary code}. 
 
-A code extends from $\mathbb{S}$ to $T \Cup T^2 \Cup ...$ to $\mathbb{S} \Cup \mathbb{S}^2 \Cup ...$  to $T \Cup T^2 \Cup ...$ in obvious way.
+\noindent A code extends from $\mathbb{S}$ to $T \cup T^2 \cup ...$ to $\mathbb{S} \cup \mathbb{S}^2 \cup ...$  to $T \cup T^2 \cup ...$ in obvious way.
 
 insert example here
 
 
-∫
+\noindent\textbf{Definition 	3:} The \textbf{average word-lenght} of a code $\mathfrak{C}$ is $L(\mathfrak{C}) := \sum_{i = 1}^{n} p_i l_i$ where $l_i$ is the length of the image of the symbol of $\mathbb{S}$, which is emitted with probability $p_i$.
+
+\noindent For now, we write $\mathfrak{C}$ to be the image of $\mathfrak{C}$. 
+
+		\subsection{Uniquely decodeable codes}
+	
+\noindent\textbf{Definition 	4:}  If for any sequencies $u_1 ... u_n = v_1 ... v_m$ in $\mathfrak{C}$ implies $m = n$ and $u_i = v_i$ for $i = 1, ..., n$ then we say that $\mathfrak{C}$ is \textbf{uniquely decodeable}.
+
+insert example here
+
+insert example here
+
+insert example here
+ 
+ 
+\noindent Let $\mathfrak{C}_0 = \mathfrak{C}$:
+
+\begin{itemize}
+	\item $\mathfrak{C}_n := \{   \omega \in T \cup T^2 \cup... | u\omega = v$ for some $u \in \mathfrak{C}_{n-1}, v \in \mathfrak{C}$ or $ u\omega = v$ for some $u \in \mathfrak{C}, v \in \mathfrak{C}_{n-1}   \}$
+	\item $\mathfrak{C}_{\infty} := \bigcup_{k \geq 1} \mathfrak{C}_k$
+\end{itemize}
+
+
+
 		\section{Introduction}
 
 \noindent\textbf{Definition 	1:} the \textbf{information} coveyed by a source is a function $I:S  \rightarrow [ 0, \infty ) $ where $S$ is a \textbf{source} \footnote{A \textbf{source} is a finite set $S$ together with a sequence of random variables $X_i$ whose range is $S$} with the properties:

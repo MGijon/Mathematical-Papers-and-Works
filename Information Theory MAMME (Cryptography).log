@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.31)  27 DEC 2017 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.31)  27 DEC 2017 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,34 +911,20 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <9> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 48.
 
 [1]
-LaTeX Font Info:    Try loading font information for U+euf on input line 59.
+LaTeX Font Info:    Try loading font information for U+euf on input line 60.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-
-! Package inputenc Error: Unicode char ∫ (U+222B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ∫
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2] [3] [4] (./Information Theory MAMME (Cryptography).aux
+) [2]
+[3] [4] [5] (./Information Theory MAMME (Cryptography).aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 14807 strings out of 493014
- 291351 string characters out of 6133350
- 337190 words of memory out of 5000000
- 18037 multiletter control sequences out of 15000+600000
- 15279 words of font info for 59 fonts, out of 8000000 for 9000
+ 14810 strings out of 493014
+ 291405 string characters out of 6133350
+ 338190 words of memory out of 5000000
+ 18040 multiletter control sequences out of 15000+600000
+ 15586 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,60p,500b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
@@ -963,11 +949,11 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf
 dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Information Theory MAMME (Cryptography).pdf" (5 pages, 21660
-0 bytes).
+Output written on "Information Theory MAMME (Cryptography).pdf" (6 pages, 22199
+2 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
