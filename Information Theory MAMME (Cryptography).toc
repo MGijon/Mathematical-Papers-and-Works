@@ -1,2 +1,8 @@
 \select@language {spanish}
-\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1}Basic knowledge of coding}{2}
+\contentsline {section}{\numberline {2}Introduction}{2}
+\contentsline {section}{\numberline {3}Properties of the entropy funcion}{2}
+\contentsline {section}{\numberline {4}Shannon-Fano Code}{3}
+\contentsline {section}{\numberline {5}Product of sources}{3}
+\contentsline {section}{\numberline {6}Markov Chains}{4}
+\contentsline {section}{\numberline {7}Sources with memory}{4}

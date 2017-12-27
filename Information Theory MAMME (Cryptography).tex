@@ -6,7 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[spanish]{babel} 
-
+\usepackage{yfonts}
 \usepackage{fancyhdr}
 \usepackage{tikz}   
 \usetikzlibrary{arrows,chains,matrix,positioning,scopes,calc,shapes.geometric}
@@ -40,19 +40,160 @@ Information Theory}
 \begin{document}
 
 	\begin{titlepage}
-		\maketitle{} \newpage
-		
-		\tableofcontents
-		\newpage
-		
+		\maketitle{} 
+	\end{titlepage}
+	
+	\newpage
+	\tableofcontents
+	\newpage
+					
+					
+		\section{Basic knowledge of coding}
+
+\noindent\textbf{Definition 	1:}  a \textbf{source} is a finite set $\mathcal{S}$ together with a set of random variables ($X_1, X_2, ...$) whose range is $\mathcal{S}$.
+
+If $P(X_n = \mathcal{S}_i)$ only depends on $i$ and not on $n$ then we say the source is \textbf{stationary} and if the $X_n$ are independent then it's \textbf{memoryless}.
+
+Insert example here
+
+\noindent\textbf{Definition 	2:} Let $\mathcal{T}$ be a finite set called \textbf{alphabet}. A map $\mathfrak{C}: \mathbb{S} \longrightarrow \Cup_{n \geq 1} T^{n}$ is called a \textbf{code}.
+
+If $|T| = r$ then $\mathfrak{C}$ is a \textbf{$r$-ary code}. 
+
+A code extends from $\mathbb{S}$ to $T \Cup T^2 \Cup ...$ to $\mathbb{S} \Cup \mathbb{S}^2 \Cup ...$  to $T \Cup T^2 \Cup ...$ in obvious way.
+
+insert example here
+
+
+∫
 		\section{Introduction}
-		\noindent\textbf{Definition 	1: Information} the information coveyed by a source is a function $I:S  \rightarrow [ 0, \infty ) $ where $S$ is a \textbf{source} \footnote{A \textbf{source} is a finite set $S$ together with a sequence of random variables $X_i$ whose range is $S$} with the properties:
+
+\noindent\textbf{Definition 	1:} the \textbf{information} coveyed by a source is a function $I:S  \rightarrow [ 0, \infty ) $ where $S$ is a \textbf{source} \footnote{A \textbf{source} is a finite set $S$ together with a sequence of random variables $X_i$ whose range is $S$} with the properties:
 		
 		\begin{itemize}
 			\item $I(s_i)$ is a decreasing function of the propability $p_i$, with $I(s_i) = 0$ if $p_i = 1$.
-			\item $I(s_i s_j) = I(s_i) + I(s_j)$
+			\item $I(s_i s_j) = I(s_i) + I(s_j)$, ie.the information geined by two symbols is the sum of the information obtained from each where the source has symbols $s_1, ..., s_q$ emitted with probabilities $p_1, ..., p_q$.
 		\end{itemize}
 		
-	\end{titlepage}
+\noindent\textbf{Lemma 	1: } $I(s_i) = - \log_{r}{p_i}$ for some $r$.
+
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+\noindent \textbf{Definition 	2:} The \textbf{$r$-ary entropy} $H_{r}(S)$ of a source $S$ is the average information coveyed by $S$.
+$$
+H_{r}(S) := - \sum_{i = 1}^{q} {p_i \log_{r}{p_i}}
+$$
+, by convenction $x \log_{r}{x}$ evaluated at $0$ is $0$.
+
+Insert five examples
+
+	\section{Properties of the entropy funcion}
+	
+\noindent \textbf{Theorem  1:}  $H_{r}(S) \leq \log_{r}{q}$ with equality if and only iff $S$ is the source where each symbol is emitted with probability $1/q$.
+
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+\noindent \textbf{Theorem  2:}  $H_{r}(S) \leq L(C)$ for unique decodeable code $C$.
+
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+
+	\section{Shannon-Fano Code}
+
+\noindent Let $S$ be the source with symbols $s_i$ and probabilities $p_i$. Let $l_i := \left\lceil \log_{r}{1/p_i} \right\rceil$. 
+
+
+\noindent Then: $\sum_{i = 1}^{q}{r^{-l_i}} \leq \sum r^{- \log_{r}{1/p_i}} = \sum p_i = 1$
+
+\noindent \textbf{Definition 	3:} by Kraft exists a prefix code with woed length $l_1, l_2, ..., l_1$. This code is called \textbf{Shannon-Fano code}.
+
+Inert example here
+
+
+\noindent \textbf{Lemma 	2:}  For the Shannon-Fano code $C$: $H_{r}(S) \leq L(C) < H_{r}(S) + 1$.
+
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+
+
+	\section{Product of sources}
+	
+\noindent Let $S$ and $T$ be two memoryless sources, $S$ with symbols $s_i$ and probabilities $p_i$ and $T$ with symbols $t_j$ and probabilities $q_j$.
+
+\noindent \textbf{Definition 	4:} The \textbf{product source} $S \times T$ is a source with symbols $s_{i}t_{j}$ and probabilities $p_{i}q_{j}$.
+
+\noindent \textbf{Theorem  3:} $H_{r}(S \times T) = H_{r} (S) + H_{r} (T)$.
+
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+\noindent \textbf{Corollary  1:} $H_{r}(S^n) = n H_{r} (S)$. 
+
+
+\noindent \textbf{Theorem  4: Noiseless Coding} The average word length $L_n$ of an optiml code of $S^n$ satisfies:
+$$
+\frac{L_n}{n} \longrightarrow H_{r} (S) \, , n \rightarrow \infty
+$$ 
+  
+\noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+
+some examples
+
+	\section{Markov Chains}
+	
+\noindent \textbf{Definition 	4:} A \textbf{Markov Chain} is a sequency of random variables where $X_{n + 1}$ depends only for $X_{n}$.
+
+$$
+P(X_{n + 1} = s_j | X_{n} = s_j ) = p_{i, j}
+$$
+
+\noindent This can be represented in a direct graph and also by a matrix $P := (p)_{i, j}$.
+
+\noindent Suppose $u_0$ is the vector which describes the initial distribution, ie. the $i$-th coordinate of $u_0$ is probability we start at $s_i$. Probability of beeing in the $i$-th state after $r$ steps is the $i$-th coordinate of $u_{0} P^{r}$.
+
+\noindent \textbf{Theorem  5:} if $\exists r \in \mathbb{N}$ such that $P^r$ has no zero entries, then $u_{0} P^{r} \longrightarrow u$, as $n \rightarrow \infty$.
+
+\noindent \textbf{Definition 	5:}  This vector $u$ is called the \textbf{stationary distribution}. It is normalised eigenvector of $P^t$ with eigenvalue $1$, ie. $u_j = \sum_i {p_{i, j} u_i}$ and $\sum_{j} {u_j} = 1$.
+ 	 
+\noindent \textbf{Definition 	6:} If $P$ is the matrix of a Markov Chain and $\exists r$ such that $P^r$ has non zero entries then we say that the Markov Chain is \textbf{regular}.
+
+  
+  \section{Sources with memory}
+  
+Suppose $S$ is a Markov Chain source with random variables $X_1, X_2, ...$ such that
+$$
+P(X_{n + 1} = s_j | X_{n} = s_j ) = p_{i, j}
+$$
+
+\noindent \textbf{Definition 	7:} $S$ is \textbf{not memoryless}, but it is stationary.
+
+ \noindent \textbf{Theorem  6:} suppose $S$ is a regular Markov Chain source with stationary distribution $u = (u_1, ..., u_)$. Let $S'$ be the stationary memoryless source with the same source elements as $S$ (where $s_i$ is emmitted with probability $w_i$). Then:
+ 
+ $$
+ H_{r} (S) \leq H_{r} (S')
+ $$
+ 
+ \noindent\textit{proof:}  Insert proof here
+
+\noindent
+{\color{gray} \rule{\linewidth}{0.5mm} }
 
 \end{document}
