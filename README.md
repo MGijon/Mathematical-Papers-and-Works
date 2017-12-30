@@ -19,4 +19,8 @@ Colection of exercises, papers and presentations about mathematical (or related)
     
     Information theory. 
 
+5. **Machine Learning**:
+
+    Topics about Machine Learning.
+
 ***
