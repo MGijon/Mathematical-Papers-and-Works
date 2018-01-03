@@ -19,7 +19,7 @@ Colection of exercises, papers and presentations about mathematical (or related)
     
     Information theory. 
     
-    MAMME (UPC Master Course, fall semester 2017) main results.
+    MAMME (UPC Master Course, fall semester 2017), Code Theory part (main results).
 
 5. **Machine Learning**:
 
