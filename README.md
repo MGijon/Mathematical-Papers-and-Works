@@ -18,6 +18,8 @@ Colection of exercises, papers and presentations about mathematical (or related)
 4. **Cryptography**: MAMME (UPC Master Course, fall semester 2017)
     
     Information theory. 
+    
+    MAMME (UPC Master Course, fall semester 2017) main results.
 
 5. **Machine Learning**:
 
