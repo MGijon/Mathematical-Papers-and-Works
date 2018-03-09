@@ -1,0 +1,8 @@
+\contentsline {section}{Resumen}{iii}
+\contentsline {section}{Abstract}{iii}
+\contentsline {section}{Preface}{vi}
+\contentsline {section}{\numberline {1}Naive Bayes Predictor}{1}
+\contentsline {section}{\numberline {2}Quality of the predictor}{1}
+\contentsline {section}{\numberline {3}Nearest Neighbors}{1}
+\contentsline {section}{\numberline {A}Appendix}{2}
+\contentsline {section}{Bibliography}{3}
