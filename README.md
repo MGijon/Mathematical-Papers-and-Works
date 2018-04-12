@@ -25,4 +25,12 @@ Colection of exercises, papers and presentations about mathematical (or related)
 
     Topics about Machine Learning.
 
+6. **Algorithmics for Data Mining**:
+
+    MIRI (Master in Innovation and Research in Informatics) subject topics.
+
+7. **Multivariate Analysis**:
+
+    MIRI (Master in Innovation and Research in Informatics) subject topics.
+
 ***
