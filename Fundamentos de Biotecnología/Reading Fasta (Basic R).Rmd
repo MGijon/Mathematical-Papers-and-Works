@@ -1,0 +1,42 @@
+---
+title: "ReadindDNA1"
+author: "Manuel Gijón Agudo"
+date: "8/10/2018"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+lang: en # language,  en: english (default), es: espa?ol, ca: catalan, ...---
+---
+
+## SetUp
+
+Antes de hacer cualquier análisis, cargamos el contenido del archivo .fasta utilizando las funciones básicas de R.
+
+```{r reading_file, include=TRUE}
+#cadena <- file("Data/gi32141095_N_0.fa", open="r")
+cadena <- file("Data/gi32141095_N_1.fa", open="r")
+print(secuencia <- readLines(cadena))   # imprimimos el contenido del archivo
+close(cadena)
+```
+
+## Contenido del archivo
+
+```{r cadena_length, include=TRUE}
+#print(secuencia[1]) # anotaciones
+print('La cadena es la siguiente:')
+print(ADN <- secuencia[2]) # cadena
+```
+
+
+```{r ADN, include=TRUE}
+bases <- data.frame(strsplit(ADN, NULL))
+print('La secuencia tiene la siguiente longitud:')
+print(length(strsplit(ADN, NULL)[[1]]))
+print('Las bases se reparten de la siguiente manera en la secuencia:')
+table(bases)
+```

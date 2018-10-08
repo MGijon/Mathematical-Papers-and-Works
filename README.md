@@ -36,4 +36,10 @@ Colection of exercises, papers and presentations about mathematical (or related)
 8.- **Estadística para la Gestión Empresarial**:
 
 MESIO (máster interuniversitario en Estadística e Investigación Operativa ) subject topics.
+
+9.- **Fundamentos de Biotecnología**:
+
+MESIO (máster interuniversitario en Estadística e Investigación Operativa ) subject topics.
+
+
 ***
