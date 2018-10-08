@@ -33,4 +33,7 @@ Colection of exercises, papers and presentations about mathematical (or related)
 
     MIRI (Master in Innovation and Research in Informatics) subject topics.
 
+8.- **Estadística para la Gestión Empresarial**:
+
+MESIO (máster interuniversitario en Estadística e Investigación Operativa ) subject topics.
 ***
