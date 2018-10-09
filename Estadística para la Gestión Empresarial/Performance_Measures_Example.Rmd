@@ -1,0 +1,118 @@
+---
+title: "Performance Measures example"
+author: "Manuel Gijón Agudo"
+date: "9/10/2018"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+lang: en 
+---
+
+```{r loading-packages, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+
+```{r input-data, include=TRUE}
+datos <- read.csv("Data/vgsales.csv")
+print(summary(datos))
+```
+
+## First exploratory analysis
+
+First we have to do an exploration of the data in order to understand them and look for NA's and others anomalies that can leads as to an incorrect interpretation of the resoults of the analysis.
+
+### The sales 
+
+```{r pressure, echo=TRUE}
+Global <- datos$Global_Sales
+Others <- datos$Other_Sales
+EEUU <- datos$NA_Sales 
+Europe <- datos$EU_Sales
+Japan <- datos$JP_Sales
+
+zones <- c('Global', 'Others', 'EEUU', 'Europe', 'Japan')
+zones_values <- c(Global, Others, EEUU, Europe, Japan) 
+sales <- data.frame(zones, zones_values)
+
+ggplot(sales, aes(x = zones, y = zones_values, fill=zones)) + 
+  geom_boxplot(varwidth = TRUE, alpha=0.25) +
+  theme(legend.position = "none") +
+  scale_x_discrete(labels=zones)
+
+# me falta añadir leyendas apropiadas
+```
+
+```{r, include=TRUE}
+print(datos$Name[datos$EU_Sales == max(datos$NA_Sales)])
+```
+
+```{r, include=TRUE}
+Global_truncado <- datos$Global_Sales[datos$Global_Sales < 0.3]
+Others_truncado <- datos$Other_Sales[datos$Global_Sales < 0.3]
+EEUU_truncado <- datos$NA_Sales[datos$Global_Sales < 0.3]
+Europe_truncado <- datos$EU_Sales[datos$Global_Sales < 0.3]
+Japan_truncado <- datos$JP_Sales[datos$Global_Sales < 0.3]
+
+zones <- c('Global', 'Others', 'EEUU', 'Europe', 'Japan')
+zones_values_truncado <- c(Global_truncado, Others_truncado, EEUU_truncado, Europe_truncado, Japan_truncado) 
+sales <- data.frame(zones, zones_values_truncado)
+
+ggplot(sales, aes(x = zones, y = zones_values_truncado, fill=zones)) + 
+  geom_boxplot(varwidth = TRUE, alpha=0.25) +
+  theme(legend.position = "none") +
+  scale_x_discrete(labels=zones)
+
+```
+
+
+### Number of releases by year, understanding the tendencies
+
+```{r, include=TRUE}
+
+
+```
+
+## Tendencies in genres
+
+```{r, include=TRUE}
+
+
+```
+
+## Tendencies in Studios
+
+```{r, include=TRUE}
+
+
+```
+
+## The Sony strategy
+
+Suppose that you're Sony and it's the year bla bla bla, you have a new machine to release and you wonder...
+
+- con qué géneros me centro
+- qué estudios tendrán más éxito
+- bla bla bla
+
+```{r, include=TRUE}
+plat <- datos$Platform
+summary(plat) 
+```
+
+We start supposing for this exampla that we don't know when release to the market a new console, we use the data of the heats to find the appropiate moment trying to understand how people buy.
+
+
+
+## The Nintendo strategy
+
+We repeat the process for the Nintendo's plattforms and see what hapends
+
+
+.
