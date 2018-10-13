@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Tema 0: Introducci\IeC {\'o}n a la inferencia estad\IeC {\'\i }stica}{3}
+\contentsline {subsection}{\numberline {1.1}bla }{3}
+\contentsline {subsection}{\numberline {1.2} bla}{3}
+\contentsline {subsection}{\numberline {1.3}Extensionof sources}{4}
+\contentsline {section}{\numberline {2}Tema 1: Muestreo}{5}
+\contentsline {subsection}{\numberline {2.1}Definiciones}{5}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\'e}todos de muestreo}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}Muestreo aleatorio simple}{5}
+\contentsline {subsection}{\numberline {2.3}Distribuciones de muestreo}{5}
+\contentsline {section}{\numberline {3}Tema 2: Estimaci\IeC {\'o}n de par\IeC {\'a}metros}{6}
+\contentsline {subsection}{\numberline {3.1}Definiciones}{6}
+\contentsline {subsection}{\numberline {3.2}Propiedades de los estimadores}{7}
+\contentsline {subsection}{\numberline {3.3}M\IeC {\'e}todos para la obtenci\IeC {\'o}n de estimadores}{7}
+\contentsline {subsection}{\numberline {3.4}M\IeC {\'e}todos de remuestreo}{7}
+\contentsline {subsection}{\numberline {3.5}B\IeC {\'a}sicos de probabilidad}{7}
+\contentsline {subsection}{\numberline {3.6}Distribuciones de probabilidad b\IeC {\'a}sicas}{8}
+\contentsline {subsubsection}{\numberline {3.6.1}Distribuciones discretas}{8}
+\contentsline {subsubsection}{\numberline {3.6.2}Distribuciones continuas}{8}
+\contentsline {subsection}{\numberline {3.7}Ejercicios detallados}{8}
+\contentsline {subsection}{\numberline {3.8}De probabilidad e introductorios}{8}
+\contentsline {subsection}{\numberline {3.9}Tema 1}{8}
+\contentsline {subsubsection}{\numberline {3.9.1}M\IeC {\'e}todos de muestreo}{8}
+\contentsline {subsubsection}{\numberline {3.9.2}Distribucinoes de muestreo}{8}
+\contentsline {subsection}{\numberline {3.10}Tema 2}{8}
+\contentsline {subsubsection}{\numberline {3.10.1}Definiciones}{8}
+\contentsline {subsubsection}{\numberline {3.10.2}Propiedades de los estimadores}{8}
+\contentsline {subsubsection}{\numberline {3.10.3}M\IeC {\'e}todos para la obtenci\IeC {\'o}n de estimadores}{8}
+\contentsline {subsubsection}{\numberline {3.10.4}M\IeC {\'e}todos de remuestreo}{8}
+\contentsline {subsection}{\numberline {3.11}Tema 3}{8}

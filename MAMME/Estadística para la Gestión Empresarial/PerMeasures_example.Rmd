@@ -1,0 +1,37 @@
+---
+title: "PerfMeasures_example"
+author: "Manuel Gijón Agudo"
+date: "10/10/2018"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+lang: en # language,  en: english (default), es: espa?ol, ca: catalan, ...
+---
+
+```{python setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Set up and preprocessing 
+
+```{python libraries, echo=TRUE}
+import numpy as np
+#import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

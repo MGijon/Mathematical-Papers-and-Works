@@ -1,0 +1,249 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+\usepackage{yfonts}
+\usepackage{fancyhdr}
+\usepackage{tikz}   
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,calc,shapes.geometric}
+\textwidth 150mm
+\oddsidemargin 4.6mm                
+\evensidemargin = \oddsidemargin
+\textheight 235mm
+\topmargin -3mm
+\headsep 2ex
+
+\pagestyle{fancy}
+\lhead{
+\small \itshape \sffamily
+Inferencia Estadística}
+
+\rhead{
+\thepage}
+
+\cfoot{Manuel Gijón Agudo}
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+
+\title{Inferencia Estadística}
+\author{Manuel Gijón Agudo }
+\date{Octubre 2018 - }
+
+
+\begin{document}
+
+	\begin{titlepage}
+		\maketitle{} 
+	\end{titlepage}
+	
+	\newpage
+	\tableofcontents
+	\newpage
+					
+					
+\section{Tema 0: Introducción a la inferencia estadística}
+
+		\subsection{bla }
+		
+\noindent\textbf{Definiciones 1 y 2:}  a \textbf{source} is a finite set $\mathcal{S}$ together with a set of random variables ($X_1, X_2, ...$) whose range is $\mathcal{S}$.
+
+If $P(X_n = \mathcal{S}_i)$ only depends on $i$ and not on $n$ then we say the source is \textbf{stationary} and if the $X_n$ are independent then it's \textbf{memoryless}.
+
+Insert example here
+
+\noindent\textbf{Definition 	2:} Let $\mathcal{T}$ be a finite set called \textbf{alphabet}. A map $\mathfrak{C}: \mathbb{S} \longrightarrow \Cup_{n \geq 1} T^{n}$ is called a \textbf{code}.
+
+If $|T| = r$ then $\mathfrak{C}$ is a \textbf{$r$-ary code}. 
+
+\noindent A code extends from $\mathbb{S}$ to $T \cup T^2 \cup ...$ to $\mathbb{S} \cup \mathbb{S}^2 \cup ...$  to $T \cup T^2 \cup ...$ in obvious way.
+
+insert example here
+
+
+\noindent\textbf{Definition 	3:} The \textbf{average word-lenght} of a code $\mathfrak{C}$ is $L(\mathfrak{C}) := \sum_{i = 1}^{n} p_i l_i$ where $l_i$ is the length of the image of the symbol of $\mathbb{S}$, which is emitted with probability $p_i$.
+
+\noindent For now, we write $\mathfrak{C}$ to be the image of $\mathfrak{C}$. 
+
+		\subsection{ bla}
+	
+\noindent\textbf{Definition 	4:}  If for any sequencies $u_1 ... u_n = v_1 ... v_m$ in $\mathfrak{C}$ implies $m = n$ and $u_i = v_i$ for $i = 1, ..., n$ then we say that $\mathfrak{C}$ is \textbf{uniquely decodeable}.
+
+insert example here
+
+insert example here
+
+insert example here
+ 
+ 
+\noindent Let $\mathfrak{C}_0 = \mathfrak{C}$:
+
+\begin{itemize}
+	\item $\mathfrak{C}_n := \{   \omega \in T \cup T^2 \cup... | u\omega = v$ for some $u \in \mathfrak{C}_{n-1}, v \in \mathfrak{C}$ or $ u\omega = v$ for some $u \in \mathfrak{C}, v \in \mathfrak{C}_{n-1}   \}$
+	\item $\mathfrak{C}_{\infty} := \bigcup_{k \geq 1} \mathfrak{C}_k$
+\end{itemize}
+
+Since everythig is finite either $\mathfrak{C}_m = \emptyset$ for some $m$ and then $\mathfrak{C}_n = \emptyset$ for $n\geq m$ or it will be periodic and start repeating.
+
+
+\noindent\textbf{Theorem 	1:} $\mathfrak{C}$ is uniquely decodeable $\Longleftrightarrow$ $\mathfrak{C} \cap \mathfrak{C}_{\infty} = \emptyset$.
+
+ \noindent\textit{proof:}  Insert proof here
+
+insert example here
+
+insert example here
+
+insert example here
+
+\noindent\textbf{Definition 	5:}  A code is a \textbf{prefix-code} if no codeword is prefix of another (ie. $\mathfrak{C}_1 = \emptyset$).
+
+\noindent A prefix code is uniquely decodeable.
+
+\noindent\textbf{Theorem 	2:} (\textbf{Kraft's inequality}) $\exists$ $r$-ary prefix code with word lengths $l_1, l_2, .., l_q$ $\Longleftrightarrow$ 
+$$
+\sum_{i = 1}^{q} r^{-l_i} \leq 1
+$$ 
+
+ \noindent\textit{proof:}  Insert proof here
+
+insert example here
+
+\noindent\textbf{Theorem 	3:} (\textbf{McMillan's inequality})  $\exists$ $r$-ary uniquely decodeable code with word lengths $l_1, l_2, .., l_q$ $\Longleftrightarrow$ 
+$$
+\sum_{i = 1}^{q} r^{-l_i} \leq 1
+$$
+
+ \noindent\textit{proof:}  Insert proof here
+ 
+ 
+		
+ 
+		\subsection{Extensionof sources}
+		
+
+
+		
+\newpage
+\section{Tema 1: Muestreo}
+	\subsection{Definiciones}
+	\subsection{Métodos de muestreo}
+		\subsubsection{Muestreo aleatorio simple}
+	\subsection{Distribuciones de muestreo}
+	
+
+\newpage
+\section{Tema 2: Estimación de parámetros}
+		\subsection{Definiciones}
+		
+			\noindent 	\textbf{Definiciones: } 
+			\begin{itemize}
+			
+				\item Sean $X_1, ..., X_n$ una secuencia de variables aleatorias independientes idénticamente distribuidas  tales que $X \thicksim f(x; \theta)$ $\theta \in \Theta$. 		
+				\item Definimos la \textbf{estimación puntual} el parámetro $\theta$ como el proceso de seleccionar un estadístico\footnote{\textbf{Estadístico: } es una función medible que tiene como espacio de salida $(X_1, ..., X_n)$ una muestra estadística de valores.} $T$ que mejor estima el valor del parámetro para esa población. 		
+				\item Llamaremos a este estadístico $T = T(X_1, ..., X_n)$ que utilizamos para estimar $\theta$ un \textbf{estimador}.		
+			\end{itemize}
+			
+			\noindent \textbf{Observaciones: }
+			
+			\begin{itemize}
+				\item Los estimadores son variables aleatorias.
+				\item Usaremos sus propiedades estadísticas para estudiar su calidad y comparar entre ellos varios estimadores.
+				\item Siempre tendremos un error en la estimación, nuestro objetivo será minimizarlo.
+			\end{itemize}
+			
+			\noindent \textbf{Definición: } Decimos que un estimador $T_n = T(X_1, ..., X_n)$ para el parámetro $\theta$ es \textbf{consistente} cuando $\forall \epsilon > 0$:
+			
+			$$
+				\lim_{n \rightarrow \infty} P( | T_n - \theta | \geq \epsilon ) = 0 
+			$$
+			
+			\noindent \textbf{Teorema: } si $T_n$ es una secuencia de estimadores tales que $E ( T_n ) \longleftrightarrow \theta$ y $V( T_n ) \longleftrightarrow 0$ cuando $n \rightarrow \infty$ entonces $T_n$ es consistente para el parámetro $\theta$.
+			
+			\noindent \textbf{Definiciones: }
+			\begin{itemize}
+				\item Definimos la \textbf{desviación} de un estimador $T$ como:
+					$$
+						bias(T) = E(T) - \theta
+					$$
+					
+				\item Sea $T$ un estimador para $\theta$. Decimos que el estimador es \textbf{no desviado} si $\forall \theta \in \Theta$:
+					$$
+						E(  T ) = \theta 
+					$$
+					
+						En caso contrario decimos que es \textbf{desviado}. Es obvio que en este caso $bias( T ) \neq 0$.a
+			\end{itemize}
+
+		\color{blue}
+			 \noindent Para introducir el siguiente concepto usaremos un ejemplo concreto. Sean $X_1, ..., X_n$ una muestra aleatoria de una variable tal que $E( X ) = \mu$ y $V( X ) = \sigma^2$. Probar que: 
+			 $$
+			 	E( \overline{X_n}) = \mu
+			 $$
+			 
+			 $$
+			 	E ( S^{2} ) = \frac{n - 1}{n} \sigma^2
+			 $$		
+			
+			ENCONTRAR ESTA MIERDA Y CONTINUAR A PARTIR DE AQUÍ, MUHAHHHAHHHAHHHAHHHA
+			 \color{black}
+		\subsection{Propiedades de los estimadores}
+		\subsection{Métodos para la obtención de estimadores}
+		\subsection{Métodos de remuestreo}
+		
+
+
+{\color{gray} \rule{\linewidth}{0.5mm} }
+
+\section*{Apéndice}
+  	\subsection{Básicos de probabilidad}
+  	
+  	 Caso discreto
+  	Probability density function: 
+
+    
+ 	Caso continuo
+
+ 
+  	
+  	
+	\subsection{Distribuciones de probabilidad básicas}
+		\subsubsection{Distribuciones discretas}
+		\subsubsection{Distribuciones continuas}	
+	
+
+	\subsection{Ejercicios detallados}
+		\subsection{De probabilidad e introductorios}
+		\subsection{Tema 1}
+			\subsubsection{Métodos de muestreo}
+			\subsubsection{Distribucinoes de muestreo}
+		\subsection{Tema 2}
+			\subsubsection{Definiciones}
+			\subsubsection{Propiedades de los estimadores}
+			\subsubsection{Métodos para la obtención de estimadores}
+			
+\par \noindent \rule{\textwidth}{0.4pt}
+
+			Encontrar un estadístico suficiente por el método de la máxima verosimilitud para $\theta$ para la distribución con la siguiente función de densidad bajo las condiciones $\theta > 0$ y $0 < x < 1$:
+			
+			$$
+				f_{\theta} (x) = \theta x^{\theta - 1}
+			$$
+			
+\par \noindent \rule{\textwidth}{0.4pt}
+
+
+
+
+
+
+
+			\subsubsection{Métodos de remuestreo}
+		\subsection{Tema 3}
+
+\end{document}
