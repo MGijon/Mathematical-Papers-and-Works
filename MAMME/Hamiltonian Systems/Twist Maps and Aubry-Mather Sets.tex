@@ -45,53 +45,115 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 	\tableofcontents
 	\newpage
 	
+%% ============ %%
+%% INTRODUCTION %%
+%% ============ %%
+
 \section{Introduction}
 
 	
 	
+	Caso 2 dimensional
 	
-	
+	Se trataría de dar una introducción y comparar con la teoría KAM explicada por Marcel, o sea que él te podrá dar más detalles.
+También en el último capítulo de Meyer Offin hay una aproximación variacional. 
+
+
 		
-		\color{blue}
-			\noindent \underline{\textbf{\textit{proof:}}}
-		\color{black}
+	Our objetive in this work is give an introduccion to the Aubry-Mathers theory, explain its importance in the context it is on and expose the fundamental resoutls of the topic. In order to arrive to this point, we first present resoults and definitions in the next section.
+		
+	%	\color{blue}
+	%		\noindent \underline{\textbf{\textit{proof:}}}
+	%	\color{black}
 		
 		
 	
 
 	
-	\color{blue}
-		\noindent \underline{\textbf{\textit{reason why:}}}
+	%\color{blue}
+	%	\noindent \underline{\textbf{\textit{reason why:}}}
 		
-		explanation
-		\par \noindent \rule{\textwidth}{0.4pt}
-	\color{black}
+	%	explanation
+	%	\par \noindent \rule{\textwidth}{0.4pt}
+	%\color{black}
 	
 
-	
-		
+%% ================================  %%
+%% FIRST DEFINITIONS AND BASIC RESOULTS   %%
+%% ================================  %%		
 
+\section{First definitions and basic resoutls}
+		
+\noindent bla bla bla bla
 		
 		
+%% ============= %%		
+%% MAIN RESOULTS  %%
+%% ============= %%		
+		
+\section{Main resoults}
+		
+\noindent \textbf{Definition}: \label{def-TwistMap} a monotone \textbf{twist map} is an orientation preserving $\mathcal{C}^{1}$-diffeomorphismm $\varphi: S^1 \times [0, 1] \longrightarrow S^{1} \times [0, 1]$ of an annulus which admits a lift $\bar{\varphi} = (f, g): \mathbb{R} \times [0, 1] \longrightarrow \mathbb{R} \times [0, 1]$ whit the following properties:
+\begin{itemize}
+	\item [(a)]\label{def-TwistMap_a} $\bar{\varphi}$ preserves (Lebesgue) area.
+	\item [(b)]\label{def-TwistMap_b}\textbf{Twist condiction}: $D_{2} f > 0$.
+	\item [(c)] \label{def-TwistMap_c}$g(\xi, 0) = 0, \ g(\xi, 1) = 1$.
+\end{itemize}
+
+\noindent \textbf{Notes}:
+	\begin{itemize}
+		\item Instead of (a) we could require $det( \bar{\varphi}' ) = 1$.
+		\item Condiction (c) means that $\varphi$ does not commute the boundary components.
+	\end{itemize}
 		
 		
+% Monotone twist maps turn up as poincaré maps of somen hamiltonian systems with two degrees of freedom
+
+A fundamental property of the monotone twist maps is that it can be globally described by a generating function:
+
+$$
+	H: D \rightarrow \mathbb{R}, \ \ \text{where} \ \ D := \{  (\xi, \eta) \in \mathbb{R}^{2} | f(\xi, 0) \leq \eta \leq f(\xi, 1) 
+	\}
+$$
+
+up to an additive constant, H is uniquely determined by:
+
+\begin{equation}\label{eq1}
+	\bar{\varphi} (x_0, y_0) = (x_1, y_1) \Leftrightarrow
+	  \begin{cases} 
+     	    - D_{1} H  (x_0, y_0) &= y_0  \\
+      		D_{2} H  (x_0, y_0) &= y_1 
+      \end{cases}
+\end{equation}
+
+\noindent To construct $H$ let $a, b: D \rightarrow \mathbb{R}$ be defined by:
+$$
+	a ( \xi, f(\xi, y)) := y,  \ \ \ \	b( \xi, f(\xi, \eta)) := g(\xi, a( \xi, \eta))
+$$
+
+Then, \ref{eq1} is equivalent to:
+$$
+	dH = - a d \xi + b d \eta
+$$
+%% =========== %%
+%% CONCLUSIONS %%
+%% =========== %%	
 		
+\section{Conclusions}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+\cite{R1}
+
+
+
+
+
+%% =========== %%
+%% BIBLIOGRAPHY %%
+%% =========== %%
+\newpage		
+\begin{thebibliography}{X}
+\bibitem{R1} bal bla bla bla
+\end{thebibliography}
 		
 		
 		

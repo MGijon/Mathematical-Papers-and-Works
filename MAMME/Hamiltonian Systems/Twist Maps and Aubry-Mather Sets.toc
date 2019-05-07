@@ -1,1 +1,4 @@
 \contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}First definitions and basic resoutls}{2}
+\contentsline {section}{\numberline {3}Main resoults}{2}
+\contentsline {section}{\numberline {4}Conclusions}{3}
