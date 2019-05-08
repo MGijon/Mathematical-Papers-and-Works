@@ -104,6 +104,7 @@ También en el último capítulo de Meyer Offin hay una aproximación variaciona
 	\begin{itemize}
 		\item Instead of (a) we could require $det( \bar{\varphi}' ) = 1$.
 		\item Condiction (c) means that $\varphi$ does not commute the boundary components.
+		\item We are assuming that the translation $T_{ (1, 0) }, T_{ (1, 0) } (\xi, y)  = (\xi + 1, y)$, generates the group of covering transformations. Then $f( \xi + 1, y) = f(\xi, y) + 1, \ g(\xi + 1, y) = g(\xi, y)$.
 	\end{itemize}
 		
 		
@@ -135,6 +136,97 @@ Then, \ref{eq1} is equivalent to:
 $$
 	dH = - a d \xi + b d \eta
 $$
+
+
+\noindent From $det( \bar{\varphi}' ) = 1$ can be conclued that the 1-form $\omega = -a d \xi + b d \eta$ is closed.
+
+\noindent Since D is simply connexted, there exits $H: D \rightarrow \mathbb{R}$ such that \ref{eq1} is true. H is $\mathcal{C}^{2}$ in the interior of D and $D_1 H, D_2 H$ and $D_2 D_1 H$ extend continuously to D.  
+
+\noindent Moreover, from (b) in the previous definition implies $D_2 D_1 H = -D_2 a \leq \delta$ for some $\delta > 0$. Finally $H( \xi + 1, \eta + 1) = H(\xi, \eta)$, i.e. $\omega$ is even exact on the cylinder D modulo translations $T_{ (j, j) } \in \mathbb{Z}' $: $\omega$ vanishes along the curve $\xi \rightarrow ( \xi, f(\xi, 0))$ from $(0, f(0, 0))$ to $(1, f(0, 0) + 1)$. 
+
+\noindent PENDIENTE!!!!
+
+\noindent Taking \ref{eq1}  as definition we can extend $\bar{\varphi}$ resp. $\varphi$ to $\mathbb{R}^2$ resp. $S^1 \times \mathbb{R}$. According to this equation, we have a variational principle for the orbits of the extend $\bar{\varphi}$. We recall that a sequence $(x_{i})_{i \in \mathbb{Z}}$ is stationary with respect to H if $D_2 H (x_{i - 1}, x_{i}) + D_1 (x_i, x_{i + 1}) = 0 \ \ \forall i \in \mathbb{Z}$.
+
+\noindent \textbf{Resoult 1}: If $(x_{i})_{i \in \mathbb{Z}}$ is stationary with respect to H then $(x_{i}, y_{i})_{i \in \mathbb{Z}}$, $y_i = - D_{1} H(x_i, x_{i + 1} )$, is an orbit of $\bar{\varphi}$, i.e. $\bar{\varphi}(x_i, y_i) = (x_{i + 1}, y_{i + 1})$. Conversely, if $(x_{i}, y_{i})_{i \in \mathbb{Z}}$ is an orbit of $\bar{\varphi}$ then $(x_{i})_{i \in \mathbb{Z}}$  is stationary with respect to H.
+
+
+\noindent \textbf{Observation}: Since the $(x_i)_{i \in \mathbb{Z}} \in \mathcal{M} (H)$ are stationary with respect to H every statement on minimal trajectories can be interpreted as a statement on certain types of orbits of the extended $\bar{\varphi}$. We can return to the original $\bar{\varphi}: \mathbb{R} \times [0, 1] \rightarrow \mathbb{R} \times [0, 1]$ in the following way: Let $f_0, f_1 \in 	\bar{G}_{+}$ be defined by $f_{0} (\xi) = f(\xi, 0)$, $f_{1} (\xi) = f(\xi, 1)$ and let $\alpha_0, \alpha_1$ be the rotation number of $f_0, f_1$. The interval $[ \alpha_0, \alpha_1 ]$ is called the \textbf{twist interval} of $\bar{\varphi}$. Later we will see that $\alpha_0 < \alpha_1$.
+
+
+\noindent \textbf{Lemma}: Suppose $x \in \mathcal{M}_{\alpha}$ and $\alpha \in ( \alpha_0, \alpha_1)$, i.e. $\alpha$ is the interior of the twist interval of $\bar{\varphi}$. Then the orbit $(x_i, y_i)_{i \in \mathbb{Z}}$, $y_i = -D_1 H (x_i, x_{i + 1})$, is contained in 
+$\mathbb{R} \times (0, 1)$. 
+
+
+\noindent \textbf{Theorem 1}: For every irrational $\alpha \in ( \alpha_0, \alpha_1)$ there exists a $\varphi$-invariant set $\mathcal{M} \subseteq S^{1} \times (0, 1)$ with the following properties:
+	\begin{itemize}
+		\item[(a)] $M_{\alpha}$ is the graph of a Lipschitz function $\psi_{\alpha}: A_{\alpha} \rightarrow (0, 1)$ defined on a closet set $A_{\alpha} \subseteq S^{1}$.
+		\item[(b)] $\varphi$ has rotation number $\alpha$  mod $(\mathbb{Z})$ on $M_{\alpha}$, i.e. there exits $h \in \mathcal{G}_{+}$ with $\alpha (h) \equiv \alpha$ mod($\mathbb{Z}$) such that $h(A_{\alpha}) = A_{\alpha}$ and
+		
+		$$
+			\varphi ( \xi, \psi_{\alpha} (\xi) ) = ( h (\xi), \psi_{\alpha} (h(\xi) ) ) \ \ \forall \xi \in A_{\alpha} 		
+		$$
+		
+		\item[(c)] The set $\mathcal{M}_{\alpha}^{\text{rec}}$ of recurrent points in $\mathcal{M}_{\alpha}$ projets either to a cantor set in $S^1$ or to all $S^{1}$. In the latter case $\mathcal{M}_{\alpha}$ is a $\varphi$-invariant Lipschitz curve winding once around the annulus $S^{1} \times [0, 1]$ and $\varphi | \mathcal{M}_{\alpha}$ is topologically conjugate to a rotation.
+	\end{itemize}
+ 
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} (we prove (a) - (c) for $\bar{\varphi}$ instead of $\varphi$; everything is invariant counting on $(\xi, \eta) \rightarrow (\xi + 1, \eta)$). Considering the previous lemma, we define:
+	
+	$$
+		\bar{\mathcal{M}}_{\alpha} := \{
+		(\xi, \eta) \in \mathbb{R} \times (0, 1) | \exists x \in \mathcal{M}_{\alpha} \ \text{ such that } \ \xi = x_0, \eta = - D_1 H(x_0, x_1)
+		\}
+	$$
+
+\noindent Acording to \ref{eq1} and the resoult 1 the set $\bar{\mathcal{M}}_{\alpha}$ is $\varphi$-invariant. Acording to the resoutls INSERTAR AQUI LAS REFERENCIAS DE MIERDA MUHAHAHAHA the set $\bar{\mathcal{M}}_{\alpha}$ has one-to-one projection onto a closed set $\bar{A}_{\alpha} \subseteq \mathbb{R}$.
+
+\noindent Considering REFERENCIA 3.19 MUHAHAHAHHA there exists a Lipschitz continuous $\bar{h} \in \bar{ \mathcal{G}_{+} }$ of a rotation number $\alpha$ such that $\bar{h} (x_0) = x_1 \ \ \forall x \in \mathcal{M}_{\alpha}$. Hence $\bar{\psi}_{\alpha} (\xi) := - D_{1} H (\xi, \bar{h} ( \xi ) )$ for $\epsilon \in \bar{A}_{\alpha}$ is Lipschitz as well.
+
+\noindent This proves (a) and (b). Now (c) is a consequence of the properties of circle maps.
+
+
+	\noindent $\spadesuit$
+\color{black}
+		
+		
+\noindent \textbf{Theorem 2}: If C is a $\varphi$-invariant curve winding once around $S^{1} \times [0, 1]$ and if $\varphi | C$ has rotation number $\alpha$ then $C \subseteq \mathcal{M}_{\alpha}$ and $C = \mathcal{M}_{\alpha}$ if $\alpha$ is irrational. 
+		
+		
+%\color{blue}
+%	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+%	\noindent $\spadesuit$
+%\color{black}
+		
+\noindent \textbf{Lemma}: For every monotone twist map the twist interval has non-empty interior.
+
+\noindent \textbf{Corollary}: For a standard diffeomorphism $\varphi: S^{1} \times \mathbb{R} \rightarrow S^{1} \times \mathbb{R}$ from (b) in the Theorem 1 choose the function s such that $s' (\xi_{0}) < -2$ for some $\xi_0 \in \mathbb{R}$. THen there is no $\varphi$-invariant curve winding around $S^1 \times \mathbb{R}$.
+
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	\noindent We know from the Theorem 2 that the existence of a $\varphi$-invariant curve winding around $S^{1} \times \mathbb{R}$ implies the existence of an $x \in \mathcal{M} (H)$ with $x_0 = \xi_0$ where $H(\xi, \eta) = \frac{1}{2} ( \xi - \eta )^2 + S(\xi), \ \ S' = s$. Now we have:
+		
+	$$
+		D_{22} H (x_{-1}, x_0, x_1 ) = D_{22} H( x_{-1}, x_0 ) + D_{11} H( x_0, x_1 ) = 2 + s' ( \xi_0 ) < 0	
+	$$
+	
+	\noindent But this contradicts the minimality of the segment $(x_{-1}, x_0, x_1)$.
+	
+	\noindent $\spadesuit$
+\color{black}
+
+\noindent \textbf{Observation}: all this resoults are true (except the Lypschitz continuity in the Theorem 1) are also true if we relax the conditions of first definition (on a monotone twist map $\varphi$) in the following way:
+
+\begin{itemize}
+	\item[(a)] It is sufficient that $\varphi$ is a homeomorphism instead of being a $\mathcal{C}^{1}$-diffeomorphism.
+	\item[(b)] Instead of $D_{2} f > 0$ it is suffices that $y \rightarrow f(\xi, y)$ is strictly increasing $\forall \xi \in \mathbb{R}$.
+\end{itemize}
+
+
+
 %% =========== %%
 %% CONCLUSIONS %%
 %% =========== %%	
