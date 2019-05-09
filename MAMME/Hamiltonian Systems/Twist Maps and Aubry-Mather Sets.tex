@@ -82,17 +82,278 @@ También en el último capítulo de Meyer Offin hay una aproximación variaciona
 %% FIRST DEFINITIONS AND BASIC RESOULTS   %%
 %% ================================  %%		
 
-\section{First definitions and basic resoutls}
+\section{First definitions and resoults}
 		
-\noindent bla bla bla bla
+\noindent \textbf{Definition 1}: $\mathbb{R}^{\mathbb{Z}} := \{ x | x: \mathbb{Z} \rightarrow \mathbb{R}  \}$, the space of bi-infinite sequences of real numbers (we consider it along with the product topology). An element $x = (x_{i})_{i \in \mathbb{Z}}$ is sometimes called \textbf{trajectory}.
+
+\noindent \textbf{Definition 2}: \textbf{Convergence} of a sequence $x^n \in \mathbb{R}^{\mathbb{Z}}$ to $x \in \mathbb{R}^{\mathbb{Z}}$ means that $\lim_{n \rightarrow \infty } x_{i}^{n} = x_{i} \ \ (\forall i \in \mathbb{Z})$.
+		
+\noindent Given a dunction $H: \mathbb{R}^2 \rightarrow \mathbb{R}$ we can extend H to trajectories (or finite segments) by:
+	$$
+		H (x_j, \cdots, x_k) = \sum_{i = j}^{k - 1} H ( x_i, x_{i + 1} ) 
+	$$
+	
+\noindent \textbf{Definition 3}:
+\begin{itemize}
+	\item We say that the segment $(x_j, \cdots, x_k)$ is \textbf{minimal} with respect to H if:
+	$$
+		H ( x_j, \cdots, x_k) = \sum_{i = j}^{k - 1} H ( x_i, x_{i + 1} )  \leq \sum_{i = j}^{k - 1} H ( x_{i}^{*}, x_{i + 1}^{*} ) = H (x_{j}^{*}, \cdots, x_{k}^{*}) \  (   \forall (x_{j}^{*}, \cdots, x_{k}^{*})  \ \text{ : } \ x_j =  x_{j}^{*}, x_k = x_{k}^{*}   )
+	$$
+	
+	\item $x \in \mathbb{R}^{\mathbb{Z}}$ is \textbf{minimal} with respect to H) if every finite segment of x is minimal (with respect to H).
+	
+	\item We call $\mathcal{M} = \mathcal{M}(H)$ to the \textbf{set of minimal trajectories} (with respect to H), for $x \in \mathbb{R}^{\mathbb{Z}}$.
+\end{itemize}
+ 
+\noindent \textbf{Hypotesis} for H (we assume that it is continuous):
+\begin{itemize}
+	\item[(H1)] \textit{Periodicity condition}: $ \forall (\xi, \eta) \in \mathbb{R}^{2}: \ H( \xi + 1, \eta + 1) = H(\xi, \eta)$.
+	\item[(H2)] \textit{Condition at infinity}: $\lim_{|\eta | \rightarrow \infty } H (\xi, \xi + \eta) = \infty$ uniformly in $\xi$.
+	\item[(H3)] \textit{Ordering condiction}: If $\xi_{*} < \xi^{*}, \eta_{*} < \eta^{*} \Rightarrow H( \xi_{*}, \eta_{*}) + H( \xi^{*}, \eta^{*}) < H( \xi_{*}, \eta^{*}) + H( \xi^{*}, \eta_{*})$.
+	\item[(H4)] \textit{Transversality condiction}: If $(x_{-1}, x_{0}, x_{1}) \neq (x_{-1}^{*}, x_{0}^{*}, x_{1}^{*})$ are minimal and $x_0 = x_{0}^{*}$ then $(x_{-1} - x_{-1}^{*})(x_{1} - x_{-1}^{*}) < 0$.
+\end{itemize}  
+
+\noindent \textbf{Definition 4}: If $H \in \mathcal{C}^{2}$ we say that $x \in \mathbb{R}^{\mathbb{Z}}$ is \textbf{stationary} if:
+
+	$$	
+		D_2 H( x_{i -1}, x_{i}) + D_1 H( x_{i}, x_{i + 1}) = 0 \ \ (\forall i \in \mathbb{Z}) 
+	$$
+	
+\noindent \textbf{Observation 1}: each $x \in \mathcal{M}(H)$ is stationary with respect to H.
+
+\noindent \textbf{Definition 5}: We say that $\mathbb{R}^{\mathbb{Z}}$ is \textbf{partially ordered} by $x < x^{*}$ if and only if $x_{i} < x_{i}^{*} \ \ (\forall i \in \mathbb{Z})$.
+
+
+\noindent \textbf{Definition 6}: $x, x^{*} \in \mathbb{R}^{\mathbb{Z}}$ \textbf{cross}:
+	\begin{itemize}
+		\item[(a)] at $i \in \mathbb{Z}$ if $x_i = x_{i}^{*}$ and $(x_{i - 1} - x^{*}_{i - 1}) (x_{i + 1} - x^{*}_{i + 1}) < 0 $.
+		\item[(b)] between i and $i + 1$ if $(x_{i} - x^{*}_{i}) (x_{i + 1} - x^{*}_{i + 1}) < 0 $.
+	\end{itemize}
+
+\noindent \textbf{Observation 2}: Acording to the \textit{transversality condiction} (H4), trajectories $x, x^{*} \in \mathcal{M}$ either are cross or are \textbf{comparable} ($x < x^{*}$, $x = x^{*}$ or $x > x^{*}$).  
+
+\noindent \textbf{Definition 7}:  $x, x^{*} \in \mathbb{R}^{\mathbb{Z}}$ are:
+	\begin{itemize}
+		\item[-] \textbf{$\alpha$-asymptotic} if $\lim_{i \rightarrow - \infty} | x_i - x_{i}^{*} | = 0$.
+		\item[-] \textbf{$\omega$-asymptotic} if $\lim_{i \rightarrow  \infty} | x_i - x_{i}^{*} | = 0$.
+		\item[-] \textbf{asymptotic} if they are both, $\alpha$-asymptotic and $\omega$-asymptotic.
+	\end{itemize}
+
+
+\noindent There is an action T on the group $\mathbb{Z}^2$ on $\mathbb{R}^{\mathbb{Z}}$ by order-preserving homeomorphisms: if $(a, b) \in \mathbb{Z}^{2}$ and $x \in \mathbb{R}^{\mathbb{Z}}$ then:
+
+	$$
+		T_{(a, b)} x = x^{*} \ \ \text{  where  } x^{*}_{i} = x_{i - a} + b
+	$$
+
+The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subseteq \mathbb{R}^{2}$ by $(a, b)$.
+
+\noindent \textbf{Definition 8}: $x \in \mathbb{R}^{\mathbb{Z}}$ is periodic with period $(q, p) \in \big( \mathbb{Z} - \{ 0 \} \big) \times \mathbb{Z}$ if $T_{(a, b)} x = x$.
+
+ 
+\noindent \textbf{Consecuences of the hypotesis}:
+	\begin{itemize}
+		\item From H1: We have $H (x) = H( T_{(a, b)} x)$ for every segment $(x_j, \cdots, x_k), k > j$ and every $(a, b) \in \mathbb{Z}^{2}$. In particular $T_{(a, b)}$ maps minimal segments to minimal ones and $\mathcal{M}$ onto itself. The continuity of H implies that $\mathcal{M}$ is closed in $\mathbb{R}^{\mathbb{Z}}$.
+		   
+		\item From H2: It is possible prove that $\forall (\xi, \eta) \in \mathbb{R}^{2}$ and $\forall i < k$ there exits a minimal segment $(x_j, \cdots, x_k)$ with $x_j = \xi, x_k = \eta$. If $(x_j, \cdots, x_k)$ is minimal then si us evert subsegment $(x_l, \cdots, x_m) \ \ (l \geq j, m \leq k)$.
+		
+		\item From H3 and H4: \textbf{Lemma 1}: Minimal trajectories cross at most once. If $x \in \mathcal{M}$ and $x^{*} \in \mathcal{M}$ conincide at $i \in \mathbb{Z}$ then $x$ and $x^{*}$ cross at $i \in \mathbb{Z}$.
+		
+		\color{blue}
+			\noindent \underline{\textbf{\textit{proof:}}} 		
+			
+			\begin{itemize}
+				\item[-] Second part comes from the transversality condiction (H4).
+				\item[-] We focus on the first part. We use a contradiction argument, we assume that $x$ and $x^{*}$ cross between j and $j + 1$ and between $k$ and $k + 1$, $j < k$. The case where one or both of the crossings take place at an integer can be treated similarly. 
+				
+				We consider the segments $(x_j, x_{j + 1}^{*}, \cdots, x_{k}^{*}, x_{k + 1})$ and $(x_{j}^{*}, x_{j + 1}, \cdots, x_{k}, x_{k + 1}^{*})$. Using the ordering condictions (H3):
+				
+				\begin{equation*}
+					\begin{split}
+						H (x_j, x_{j + 1}^{*}, \cdots, x_{k}^{*}, x_{k + 1}) + H (x_{j}^{*}, x_{j + 1}, \cdots, x_{k}, x_{k + 1}^{*}) &= H(x_j, x_{j + 1}^{*} ) + H (x_{j + 1}^{*}, \cdots, x_{k}^{*}) \\
+						&+ H ( x_{k}^{*}, x_{k + 1} ) + H (x_{j}^{*}, x_{j + 1})  \\
+						&+ H (x_{j + 1}. \cdots, x_k) + H( x_{k}, x_{k + 1}^{*}) \\
+						&< H( x_{j}^{*}, x_{j + 1}^{*}, \cdots, x_{k + 1}^{*} ) \\
+						&+ H(x_j, x_{j + 1}, \cdots, x_{k + 1})
+					\end{split}
+				\end{equation*}	
+				
+				This contradicts the minimality of at least one of the segments $(x_{j}, \cdots, x_{k + 1})$ and $(x_{j}^{*}, \cdots, x_{k + 1}^{*})$.
+							 
+			\end{itemize}
+	
+			\noindent $\spadesuit$
+		\color{black}
 		
 		
+		\textbf{Corollary}: If $x \in \mathcal{M}$ and $x^{*} \in \mathcal{M}$ are pericodic with the same period then $x$ and $x^{*}$ do not cross. If $x \in \mathcal{M}$ is periodic with minimal period $(q, p)$ then $q$ and $p$ are relatively prime.
+		
+		\color{blue}
+			\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	
+			\noindent $\spadesuit$
+		\color{black}
+		
+		
+	\end{itemize}
+
+\noindent \textbf{Theorem 1}: $\forall (q, p) \in \big( \mathbb{Z} - \{ 0 \} \big) \times \mathbb{Z} \ \ \exists x \in \mathcal{M}$ periodic with $(q, p)$.
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	
+	\noindent $\spadesuit$
+\color{black}
+		
+		
+\noindent \textbf{Lemma 2}: Suppose $x \in \mathcal{M}$ and $x^{*} \in \mathcal{M}$ are $\alpha$-asymptotic (resp. $\omega$-asymptotic) and $| x_{i + 1} - x_i |$ is bounded for $i \rightarrow - \infty$ (resp. $i \rightarrow  \infty$). Then $x$ and $x^{*}$ do not cross.
+		
+\noindent \textbf{Theorem 2}: Suppose $x \in \mathcal{M}$. Then $x$ and $T_{(a, b)} x$ do not cross for any $(a, b) \in \mathbb{Z}^{2}$.
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	
+	\noindent $\spadesuit$
+\color{black}
+
+\noindent \textbf{Notation 1}: We call $\bar{B}_{x}$ the closure of $B_{x} := \{ T_{(a, b)} x | (a, b) \in \mathbb{Z}^{2}  \} \subset \mathbb{R}^{\mathbb{Z}}$ and $p_i: \mathbb{R}^{\mathbb{Z}} \rightarrow \mathbb{R}$ the projection $x \rightarrow x_i$ (obviousy is continuous, open and order preserving).  
+
+\noindent \textbf{Lemma 3}: Suppose $x \in \mathcal{M}$. Then $\bar{B}_{x}$ is totally ordered. The projection $p_0$ maps $\bar{B}_{x}$  homeomorphically onto a closed subset of $\mathbb{R}$.
+
+\noindent \textbf{Notation 2}:
+\begin{itemize}
+	\item[-]  Let $G_{+}$ denote the group of orientation-preserving homeomorphisms of the circle $S^{1} = \mathbb{R} / \mathbb{Z}$.
+	\item[-] $\bar{G_{+}} = \{ f | f : \mathbb{R} \rightarrow \mathbb{R} \ \text{  continuous, strictly increasing, } \ f(x+ 1) = f(x) + 1 \}$
+\end{itemize}
+
+\noindent \textbf{Theorem 3}: For every $x \in \mathcal{M}$ there exists a a circle map $f \in \bar{G_{+}}$ such that $x_{i + 1} = f (x_i) \ \ (\forall i \in \mathbb{Z})$.
+
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	
+	\noindent $\spadesuit$
+\color{black}
+
+
+
+DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
+
+\noindent \textbf{Theorem 4}: $\forall \alpha \in \mathbb{R}$ the set $\mathcal{M}_{\alpha} := \{ x \in \mathcal{M} | \alpha(x) = \alpha$ is not empty.
+
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	
+	\noindent $\spadesuit$
+\color{black}
+
+
+
+%\noindent \textbf{Definition 9}: for every $\varphi \in G_{+}$ we define the \textbf{Poincar\'e rotation number} $\alpha ( \varphi ) \in S^{1}$ COMPLETAR MUHAHAHAHAHAHAHAH
+
+
 %% ============= %%		
 %% MAIN RESOULTS  %%
 %% ============= %%		
 		
 \section{Main resoults}
 		
+\subsection{Structure of the set of minimal trajectories with irrational rotation number}
+
+\noindent \textbf{Definition 9}: $\mathcal{M}_{\alpha}$ can be describe by a single circle map, and in particular, every $\bar{B_{x}} \subseteq \mathcal{M}_{\alpha}$ contains the set $\mathcal{M}_{\alpha}^{\text{rec}}$ of \textbf{recurrent trajectories} in $\mathcal{M}_{\alpha}$, 
+
+	$$
+		\mathcal{M}_{\alpha}^{\text{rec}} := \{ x \in \mathcal{M}_{\alpha} | \exists k_i \in \big( \mathbb{Z}^{2} - \{ 0 \}       \big) \ \text{ such that } \ x = \lim_{i \rightarrow \infty } T_{k_i} x \}
+	$$
+	
+	
+\noindent \textbf{Theorem 5}: Suppose $\alpha$ is irrational. Then $\mathcal{M}_{\alpha}$ is totally ordered.
+
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	ESTO ES LARGO DE COJONES! MUHAHAHAHAHA
+	
+	\noindent $\spadesuit$
+\color{black}
+
+
+\subsection{Structure of the set of minimal trajectories with rational rotation number}
+
+
+\noindent For rational $\alpha$, say $\alpha = \frac{p}{q}$ with $p$ and $q$ relatively prime. 
+
+
+\noindent \textbf{Notation 3}: 
+	\begin{itemize}
+		\item[-] $P_{q, p} := \{ x \in \mathbb{R}^{\mathbb{Z}} | T_{(q, p)} x = x \}$.
+		\item[-] $H_{q, p} := H(x_0, \cdots, x_q)$.
+	\end{itemize}
+
+
+\noindent \textbf{Theorem 6}: $\mathcal{M}_{\alpha}^{\text{rec}}$ is non-empty, closed and totally ordered. Every $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ has a minimal period $(q, p)$. If $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ then $x$ is a minimun of $H_{q, p}: P_{q, p} \rightarrow \mathbb{R}$, in particular $H_{q, p}^{\text{min}} \ (\forall x \in \mathcal{M}_{\alpha}^{\text{rec}} )$.
+
+
+\color{blue}
+	\noindent \underline{\textbf{\textit{proof:}}} 		
+
+	ESTO ES LARGO DE COJONES! MUHAHAHAHAHA
+	
+	\noindent $\spadesuit$
+\color{black}
+
+
+%% =========== %%
+%% CONCLUSIONS %%
+%% =========== %%	
+		
+\section{Conclusions}
+		
+\cite{R1}
+
+
+
+
+
+%% =========== %%
+%% BIBLIOGRAPHY %%
+%% =========== %%
+\newpage		
+\begin{thebibliography}{X}
+\bibitem{R1} bal bla bla bla
+\end{thebibliography}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+	
+
+
+\end{document}
+
+
+
+
+
+
+\\
 \noindent \textbf{Definition}: \label{def-TwistMap} a monotone \textbf{twist map} is an orientation preserving $\mathcal{C}^{1}$-diffeomorphismm $\varphi: S^1 \times [0, 1] \longrightarrow S^{1} \times [0, 1]$ of an annulus which admits a lift $\bar{\varphi} = (f, g): \mathbb{R} \times [0, 1] \longrightarrow \mathbb{R} \times [0, 1]$ whit the following properties:
 \begin{itemize}
 	\item [(a)]\label{def-TwistMap_a} $\bar{\varphi}$ preserves (Lebesgue) area.
@@ -225,42 +486,3 @@ $\mathbb{R} \times (0, 1)$.
 	\item[(b)] Instead of $D_{2} f > 0$ it is suffices that $y \rightarrow f(\xi, y)$ is strictly increasing $\forall \xi \in \mathbb{R}$.
 \end{itemize}
 
-
-
-%% =========== %%
-%% CONCLUSIONS %%
-%% =========== %%	
-		
-\section{Conclusions}
-		
-\cite{R1}
-
-
-
-
-
-%% =========== %%
-%% BIBLIOGRAPHY %%
-%% =========== %%
-\newpage		
-\begin{thebibliography}{X}
-\bibitem{R1} bal bla bla bla
-\end{thebibliography}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	
-	
-
-
-\end{document}
