@@ -53,14 +53,31 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 
 	
 	
-	Caso 2 dimensional
+	%Caso 2 dimensional
 	
-	Se trataría de dar una introducción y comparar con la teoría KAM explicada por Marcel, o sea que él te podrá dar más detalles.
-También en el último capítulo de Meyer Offin hay una aproximación variacional. 
+	%Se trataría de dar una introducción y comparar con la teoría KAM explicada por Marcel, o sea que él te podrá dar más detalles.
+%También en el último capítulo de Meyer Offin hay una aproximación variacional. 
 
 
 		
-	Our objetive in this work is give an introduccion to the Aubry-Mathers theory, explain its importance in the context it is on and expose the fundamental resoutls of the topic. In order to arrive to this point, we first present resoults and definitions in the next section.
+	Our main goal in this work is give an introduccion to the Aubry-Mather theory, explain its importance in the context it is on and to expose the fundamental resoutls of the topic. In order to arrive to this point, we first present results and definitions in the next section, being the fundamental results in the third chapter.
+	
+	\noindent In order to understand this topic, in the second chapter we present results and definitions that are indispensable to understand the further results. Unlike what we have done in class, we will working mostly with maps instead of flows and this is the reason why this chapter is longer, despite it is less important, than the next one.
+	
+\noindent KAM-Theory for this kind of maps shows that for this kind of maps which are sufficiently $\mathcal{C}^{k}$-close to an integrable one, $\varphi_0$, many of this invariant curves persist. The invariant curves are destroyed when we go too far away from the integrable situation and the Mather sets $\mathcal{M}_{\alpha}$ are the most important remmants of the invariant curves of irrational rotation number $\alpha$.
+
+	\noindent The Aubry-Mather theory appears to explain what happend with perturbed systems and its main contribution is to explain what happend with the orbits in the cases that are not covered by KAM theory. This results are the key of the chapter three.  
+	
+	\noindent We will be working with area-preserving monotone twist maps $\varphi: S^{1} \times [0, 1] \rightarrow S^{1} \times [0, 1] $ preserving the boundary components. The Mather sets will be a particular $\varphi$-invariant subsets of the cylinder $S^{1} \times [0, 1]$. We will like to find closed $\varphi$-invariant curves wich separetes $S^{1} \times \{ 0 \}$ from $S^{1} \times \{ 1 \}$ because this are related with the stability of the system $\{ \varphi^{n} \}_{n \in \mathbb{Z}}$ in this sense:
+	\begin{itemize}
+		\item[-] If such an invariant curve exists, then every orbit of $\varphi$ on one of the two sides in which that curve divides the cylinder.
+		\item[-] If such an invariant curve does not exists, then $\exists p \in S^{1} \times (0, 1)$ such that $\varphi^{n} (p)$ converges to $S^{1} \times \{ 0 \}$  if $n \rightarrow \infty$ and $S^{1} \times \{ 1 \}$ if $n \rightarrow - \infty$.
+	\end{itemize}
+	
+
+
+
+	\noindent One note about the bibliography, this work has been done using a very similar structure that the one in 	\cite{R1}. Also we have consider the documents \cite{R2} and \cite{R3}.
 		
 	%	\color{blue}
 	%		\noindent \underline{\textbf{\textit{proof:}}}
@@ -79,10 +96,10 @@ También en el último capítulo de Meyer Offin hay una aproximación variaciona
 	
 
 %% ================================  %%
-%% FIRST DEFINITIONS AND BASIC RESOULTS   %%
+%% FIRST DEFINITIONS AND BASIC results   %%
 %% ================================  %%		
 
-\section{First definitions and resoults}
+\section{First definitions and results}
 		
 \noindent \textbf{Definition 1}: $\mathbb{R}^{\mathbb{Z}} := \{ x | x: \mathbb{Z} \rightarrow \mathbb{R}  \}$, the space of bi-infinite sequences of real numbers (we consider it along with the product topology). An element $x = (x_{i})_{i \in \mathbb{Z}}$ is sometimes called \textbf{trajectory}.
 
@@ -190,8 +207,16 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 		
 		\color{blue}
 			\noindent \underline{\textbf{\textit{proof:}}} 		
+				\begin{itemize}
+					\item[-] If $x$ and $x^{*}$ have the same period and cross once, then $x$ and $x^{*}$ cross infinitely often, this contradicts the previous theorem.
+					\item[-] If $x \in \mathcal{M}$ is periodic with minimal period $(q, p)$ and $(q, p) = n(a, b)$ with $(a, b) \in \mathbb{Z}^{n}$ and $n > 1$ then $T_{(a, b)} x \neq x$.
+					
+					Since $x$ and $T_{(a, b)}x$ do not cross, we have either $T_{(a, b)}x < x$ or $T_{(a, b)}x > x$.
+					
+					By induction we get $T_{(q, p)}x < x$ (resp. $T_{(q, p)}x > x$) in contradiction to our hypotesis.
 
-	
+				\end{itemize}
+			
 			\noindent $\spadesuit$
 		\color{black}
 		
@@ -203,6 +228,66 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
 
+	We assume $q > 0$. The idea od the proof is consider the set $P_{(q, p)} = \{ x \in \mathbb{R}^{\mathbb{Z}} | T_{(q, p)} x = x \}$ of trajectories pericodic with $(q, p)$ and to minimize the function
+	
+	$$
+		H_{(q, p)}: P_{(q, p)} \rightarrow \mathbb{R}, \ \ H_{(q, p)} (x) = H (x_0, \cdot, x_q)
+	$$
+	
+	We will prove that arbitrary segments of a minimun $x$ of $H_{(q, p)}$ are minima, i.e. $x \in \mathcal{M}$. This will be follow once we have proved that no two minima of $H_{(q, p)}$  cross.
+	
+	\begin{itemize}
+		\item[-] From properties H1 and H2: $H_{(q, p)}$  attains its infimum $H_{(q, p)}^{\text{min}}$ on $P_{(q, p)}$. 
+		\item[-] Assume two minima $x$ and $x^{*}$ of $H_{(q, p)}$ cross. This can only happend if $q \geq 2$.
+		\item[-] We define $x^{+} := \max{ \{ x_i, x_{i}^{*} \} } \in \mathbb{R}^{\mathbb{Z}}$ and $x^{-} := \min{ \{ x_i, x_{i}^{*} \} } \in \mathbb{R}^{\mathbb{Z}}$. Then $x^{+}$ and $x^{-}$ are also periodic with $(q, p)$.
+		\item[-] Using H3, we see that:
+			\begin{equation} \label{T1.1}
+				H_{(q, p)} (x^{-}) + H_{(q, p)} (x^{+}) \leq H_{(q, p)} (x) + H_{(q, p)} (x^{*}) = 2 H_{(q, p)}^{\text{min}}
+			\end{equation}
+			
+			which strict inequality id $x$ and $x^{*}$ cross between $i$ and $i + 1$ for some $0 \leq i < q$. 
+			
+			Since $x^{-}, x^{+} \in P_{(q, p)}$ we have equality in \ref{T1.1} so that $x$ and $x^{*}$ can not cross between $i $ and $i+1$ for any $0 \leq i < q$.
+			
+			By periocity it implies that $x$ and $x^{*}$ cannot cross between $i$ and $i + 1$ for any $i \in \mathbb{Z}$.
+			
+			Hence, id $x$ and $x^{*}$ cross the cross at some $i \in \mathbb{Z}$. We may assume that $i = 1$ since $T_{(i - 1, 0)}x $ and $T_{(i - 1, 0)}x^{*}$ are also minimo of $H_{(q, p)}$. 
+			
+			In this case H4 implies that not both $(x_{0}^{-}, x_{1}^{-}, x_{2}^{-})$ and $(x_{0}^{+}, x_{1}^{+}, x_{2}^{+})$ are minimal. 
+			
+			\item[-] By changing $x_{1}^{-}$ resp. $x_{1}^{+}$ in $P_{(q, p)}$ which coincides with  $x^{-}$  resp. $x^{+}$ except for $i = nq + 1 \ (n \in \mathbb{Z})$, and such that
+			
+			\begin{equation} \label{T1.2}
+				H_{(q, p)} ( \bar{x^{-}} ) < H_{(q, p)} (x^{-}) \ \ \text{resp.} \ \ H_{(q, p)} ( \bar{x^{+}} ) < H_{(q, p)} (x^{+})
+			\end{equation}
+			
+			But \ref{T1.1} implies that $x^{-}$ and $x^{+}$ are minima of $H_{(q, p)}$ and it contradicts \ref{T1.2}.
+			
+			\item[-] Hence $x$ and $x^{*}$ cannot cross at all. In particular, we obtain:
+			
+			If $x$ is a minimun if $H_{(q, p)}$ then $x$ does not cross any of its translates $T_{(j, k)} x \ \ (j, k) \in \mathbb{Z}^{2}$.
+			
+			\item[-] Finaly, we have to prove that the last argument implies our claim: suppose $n \geq 1, (q^{*}, p^{*}) = n (q, p)$ and $x \in P_{(q^{*}, p^{*})}$ is a minimun of $H_{(q^{*}, p^{*})}$. 
+			
+			So the last argument appliest to $x$ with $(q, p)$ replaced by $(q^{*}, p^{*})$.
+			
+			Using the previous corollary, 
+			
+			\begin{equation} \label{T1.3}
+				H_{(q^{*}, p^{*})}^{\text{min}} = n H_{(q, p)}^{\text{min}}
+			\end{equation}			
+				
+			Since $H_{(q^{*}, p^{*})} (\bar{x})= n H_{(q, p)} (\bar{x})$ for all $\bar{x} \in P_{(q, p)}$.  Equation \ref{T1.3} implies that every minimum $x$ of $H_{(q, p)}$ is also a minumum of $H_{(q^{*}, p^{*})}$ for every $(q^{*}, p^{*}) = n (q, p)$.
+			
+			\item[-] In particular, if $x \in P_{(q, p)}$ is a minimun of $H_{(q, p)}$ we have:
+			
+			\begin{equation} \label{T1.4}
+				(x_0, \cdots, x_{nq}) \ \text{ is a minimal segment } \ \forall n \geq 1
+			\end{equation}
+			
+			\item[-] Using the periodicity of $x$ we see that \ref{T1.4} implies that arbitrary segments of $x$ are minima, i.e. $x \in \mathcal{M}$.
+			
+	\end{itemize}
 	
 	\noindent $\spadesuit$
 \color{black}
@@ -210,11 +295,35 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 		
 \noindent \textbf{Lemma 2}: Suppose $x \in \mathcal{M}$ and $x^{*} \in \mathcal{M}$ are $\alpha$-asymptotic (resp. $\omega$-asymptotic) and $| x_{i + 1} - x_i |$ is bounded for $i \rightarrow - \infty$ (resp. $i \rightarrow  \infty$). Then $x$ and $x^{*}$ do not cross.
 		
-\noindent \textbf{Theorem 2}: Suppose $x \in \mathcal{M}$. Then $x$ and $T_{(a, b)} x$ do not cross for any $(a, b) \in \mathbb{Z}^{2}$.
+\noindent \textbf{Theorem 2}: Suppose $x \in \mathcal{M}$. Then $x$ and $T_{(a, b)} x$ do not cross for any $(a, b) \in \mathbb{Z}^{2}$. Equivalently, if $x \in \mathcal{M}$ then $B_{x} = \{ T_{(a, b)}x | (a, b) \in \mathbb{Z}^{2} \}$ is totally ordered.
 
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
-
+		\begin{itemize}
+			\item[-] The case $a = 0$ is trivial, so suppose $a \neq 0$.
+			\item[-] We assume that $T_{(a, b)}x$ and $x$ cross and, without loss of generaluty, that the crossing takes place at $0$ or between $0$ and $1$. By previous results we know that they just cross once.
+			\item[-] Interchanging $x$ and $x^{*}$ if its necessary we assume that
+				$$
+					x_{j}^{*} < x_j \ \ \text{for} \ \ j < 0 \ \ \text{and} \ \ x_{j}^{*} > x_j \ \ \text{for} \ \ j > 0
+				$$ 
+			\item[-] We are going to prove the case $a > 0$, the case $a < 0$ is treated in the same way.
+			\begin{itemize}
+				\item[·] The preceding equations imply: for every $j \leq 0$ the sequence $v \in \mathbb{N} \rightarrow x_{j - va} + vb$ is decreasing and for every $j > 0$ the sequence $v \in \mathbb{N} \rightarrow x_{j - va} - vb$ is decreasing.
+				\item[·] We compare $x$ to an $\bar{x} \in \mathcal{M}$ which is periodic with period $(a, b)$ and satisfies $\bar{x}_{0} < x_{0}$. To obtain such $\bar{x}$ we use Theorem 1 and a translation $T_{(0, j)}$, if necessary.
+				\item[·] By Lemma 1 we have $\bar{x}_{j} < x_{j}$ for $j \leq 0$ or $\bar{x}_{j} < x_{j}$ for $j \geq 0$.
+				\item[·] Lets focus on the case $\bar{x}_{j} < x_{j}$ for $j \leq 0$ (the other one is analogous).
+				\begin{itemize}
+					\item[+] For $j \leq 0$ the sequence $v \rightarrow x_{j - va} + vb$ is decreasing and bounded below by $\bar{x}_{j - va} + vb = \bar{x}_{j}$. 
+					\item[+] Hence
+						$$
+							\bar{x}_{j} := \lim_{ v \rightarrow \infty} (x_{j - va} + vb) = \lim_{v \rightarrow \infty} (T_{(va, vb)} x)_{j}
+						$$
+					exists for $j \leq 0$ and $\bar{x}_{j - a} + b = \bar{x}_j$.
+					\item[+] From the periocity of $(\bar{x}_j)_{j \leq 0}$ one can conclude that both $x$ and $x^{*}$ are $\alpha$-asymptotic to $(\bar{x}_j)_{j \leq 0}$ and that $| x_{i + 1} - x_{i} |$ is bounded for $j \rightarrow \infty$.
+					\item[+] Now Lemma 2 contradicts oru assumption that $x$ and $x^{*}$ cross.
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
 	
 	\noindent $\spadesuit$
 \color{black}
@@ -234,39 +343,73 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
-
+		\begin{itemize}
+			\item[-] We define $f$ on a closet set $A:= p_{0} ( \bar{B}_{x})$ by $f:= p_{1} \circ (p_{0} | \bar{B}_{x} )^{-1}$ or, equivalently, by $f(x_{0}^{*}) := x_{1}^{*}$ if $x \in \bar{B}_{x}$.
+			\item[-] By Lemma 3 f is strictly increasing homeomorphism of A onto itself. Obviously $f$ satisfies $f(t + 1) = f(t) + 1 \ \ (\forall t \in A)$.
+			\item[-] We extend $f$ from A to $\mathbb{R}$ in an affine way, i.e. if our space is $\cup (a_n, b_n)$ then $f ( (1 -t)a_n + t b_n) := (1 - t)f(a_n) + t f(b_n)$ for $t \in [0, 1]$. One easily sees that $f \in \bar{G_{+}}$ and $f(x_i) = f ( (T_{(-i, 0)} x)_{0} ) = x_{i + 1}$.
+		\end{itemize}
 	
 	\noindent $\spadesuit$
 \color{black}
 
+\noindent \textbf{Definition 9}:Let $\varphi \in G_{+}$. The \textbf{Poincar\'e rotation number} $\alpha( \varphi) \in S^{1}$ can be interpreted geometrically as the ``average angle'' by which $\varphi$ rotates $S^{1}$.
 
 
-DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
+\noindent \textbf{Observation 3}: homeomorphisms $\varphi \in G_{+}$ with $\alpha ( \varphi )$ irrational digger radically from those with rational $\alpha ( \varphi )$.
+\begin{itemize}
+	\item[-] We have $\alpha ( \varphi ) \in \mathbb{Q} / \mathbb{Z}$ if and only if \textit{$\varphi$ has a periodic point}.
+	\item[-] If $\alpha ( \varphi )$ is irrational the limit set of every orbit $ \{ \varphi^{i} (z) | i \in \mathbb{Z} \}$ is the unique smallest closed non-empty $\varphi$-invariant subset of $S^{1}$, i.e. the unique minimal set of $\varphi$. We denote it $Rec(\varphi)$ and the points $z \in Rec(\varphi)$ are called \textbf{recurrent}.
+	\begin{itemize}
+		\item[(i)] Every orbit is dense in $S^{1}$, i.e. $Rec(\varphi) = S^1$. Theis is the case if and only if exists an $h \in G_{+}$ such that $h \circ \varphi \circ h^{-1}$ is a rotation by $\alpha ( \varphi)$.
+		\item[(ii)] $Rec(\varphi)$ is a Cantor set.
+	\end{itemize}
+\end{itemize}
 
-\noindent \textbf{Theorem 4}: $\forall \alpha \in \mathbb{R}$ the set $\mathcal{M}_{\alpha} := \{ x \in \mathcal{M} | \alpha(x) = \alpha$ is not empty.
+
+\noindent \textbf{Corollary}: there exists a continuous map $\bar{\alpha}: \mathcal{M} \rightarrow \mathbb{R}$ with the following properties:
+	\begin{itemize}
+		\item[(a)] $\forall x \in \mathcal{M}, i \in \mathbb{Z}$ we have $| x_{i} - x_{0} - i \bar{\alpha} ( x ) | < 1$, in particular 
+			$$
+				\bar{\alpha} (x) = \lim_{|i| \rightarrow \infty} \frac{x_i}{i}
+			$$
+		\item[(b)] If $x \in \mathcal{M}$ is periodic with period $(q, p)$, then $\bar{\alpha} (x) = \frac{p}{q}$.
+		\item[(c)] $\bar{\alpha}$ is invariant under T; i.e. $\bar{\alpha} \big( T_{(a, b)} x \big) = \bar{\alpha} (x) \ \ (\forall (a, b) \in \mathbb{Z}^{2})$.
+	\end{itemize}
+
+\noindent \textbf{Theorem 4}: $\forall \alpha \in \mathbb{R}$ the set $\mathcal{M}_{\alpha} := \{ x \in \mathcal{M} | \alpha(x) \} = \alpha$ is not empty.
 
 
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
-
+		\begin{itemize}
+			\item[-] By Theorem 1 and the previous Corollary, we know that $\mathcal{M}_{\alpha} \neq \O$ if $\alpha \in \mathbb{Q}$.
+			\item[-] Choosen a sequence $\alpha_n \in \mathbb{Q}$ such that $\lim_{n} \alpha_n = \alpha$ and $x^{n} \in \mathcal{M}_{\alpha_n}$ with $x_{0}^{n} \in [0, 1]$. Then $| \alpha_n | \leq C$ for some $C > 0$. From (a) in the previous Corollary:
+			
+				$$
+					| x_{i}^{n} | \leq 2 + |i| C \ \ (\forall n \in \mathbb{N}, \ \forall i \in \mathbb{Z})
+				$$
+				
+			\item[-] For the first results, we know that we have $x^{*} \in \mathcal{M}$ zs a point of accumulation of the sequence $x^n$. By the continuity of $\bar{\alpha}$ we have $\bar{\alpha} (x^{*}) = \alpha$.
+		\end{itemize}
+		
 	
 	\noindent $\spadesuit$
 \color{black}
 
 
 
-%\noindent \textbf{Definition 9}: for every $\varphi \in G_{+}$ we define the \textbf{Poincar\'e rotation number} $\alpha ( \varphi ) \in S^{1}$ COMPLETAR MUHAHAHAHAHAHAHAH
+%for every $\varphi \in G_{+}$ we define the \textbf{Poincar\'e rotation number} $\alpha ( \varphi ) \in S^{1}$ COMPLETAR MUHAHAHAHAHAHAHAH
 
 
 %% ============= %%		
-%% MAIN RESOULTS  %%
+%% MAIN results  %%
 %% ============= %%		
 		
-\section{Main resoults}
+\section{Main results}
 		
 \subsection{Structure of the set of minimal trajectories with irrational rotation number}
 
-\noindent \textbf{Definition 9}: $\mathcal{M}_{\alpha}$ can be describe by a single circle map, and in particular, every $\bar{B_{x}} \subseteq \mathcal{M}_{\alpha}$ contains the set $\mathcal{M}_{\alpha}^{\text{rec}}$ of \textbf{recurrent trajectories} in $\mathcal{M}_{\alpha}$, 
+\noindent \textbf{Definition 10}: $\mathcal{M}_{\alpha}$ can be describe by a single circle map, and in particular, every $\bar{B_{x}} \subseteq \mathcal{M}_{\alpha}$ contains the set $\mathcal{M}_{\alpha}^{\text{rec}}$ of \textbf{recurrent trajectories} in $\mathcal{M}_{\alpha}$, 
 
 	$$
 		\mathcal{M}_{\alpha}^{\text{rec}} := \{ x \in \mathcal{M}_{\alpha} | \exists k_i \in \big( \mathbb{Z}^{2} - \{ 0 \}       \big) \ \text{ such that } \ x = \lim_{i \rightarrow \infty } T_{k_i} x \}
@@ -279,11 +422,84 @@ DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
 
-	ESTO ES LARGO DE COJONES! MUHAHAHAHAHA
+		\begin{itemize}
+			\item[-] Choose $x \in \mathcal{M}_{\alpha}$ and $f \in \bar{G_{+}}$ acording to the Theorem 3, i.e. $x_i = f' (x_0), \ \forall i \in \mathbb{Z}$.
+			\item[-] First we are going to show that every recurrent orbit of $f$ is in $\mathcal{M}_{\alpha}$, i.e. if $x_{0}^{*} \in Rec(f)$ then $x_{i}^{*} = f^{i} (x_{0}^{*} )$ defines an element of $\mathcal{M}_{\alpha}$.
+			
+				\begin{itemize}
+					\item[·] Acording to results about circle homeomorphisms (that one can found here \cite{R1}), there exits a sequence $( i_n, k_n ) \in \mathbb{Z}^{2}$ such that
+						$$
+							x_{0}^{*} = \lim_{n \rightarrow \infty} ( x_{i_n} + k_{n} )
+						$$
+						
+					\item[·] Then
+					
+						$$
+							x_{i}^{*} = f^{i} ( x_{0}^{*} ) = \lim_{n \rightarrow 	\infty} f^{i} ( x_{i_n} + k_n ) = \lim_{n \rightarrow 	\infty} ( x_{i_n + i} + k_n )
+						$$
+					\item[·] So that $x^{*} = \lim_{n \rightarrow \infty} T_{(-i_n, k_n)} x \in \mathcal{M}$.
+				\end{itemize}
+				
+			\item[-] Now suppose $x^{0}, x^{1} \in \mathcal{M}_{\alpha}$ and $f_{0}, f_{1}$ are corresponding maps in $\bar{G_{+}}$. 
+				\begin{itemize}
+					\item[·] By a previous Lemma we know that minimal trajectories crows only one. So the precefing argument shows that no two recurrent orbits of $f_{0}$ and $f_{1}$ can intersext more than once.
+					\item[·] Another resoult (we use this precise one along all the demostration) of circle homomorphisms (\cite{R1}) implies that $f_0$ and $f_1$ coincide on $Rec(f_0 ) = Rec ( f_1 )$. 
+					\item[·] So, if $x_{0}^{0} \in Rec(f_0)$ and $x_{0}^{1} \in Rec(f_1)$ the trajectories will not cross,.
+					\item[·] In the general case let $x_{0}^{\pm}, x_{1}^{\pm}: \mathbb{R} \rightarrow \mathbb{R}$ denote the strictly increasing maps constructed in this resoult on circle homeomorphisms we are working with from orbits $x_{j}^{0} = f_{0}^{j} (x_{0}^{0})$ and $x_{j}^{1} = f_{}^{j} (x_{0}^{1})$. By the proof of the same resoult we know that $\exists c \in \mathbb{R}$ such that $x_{0}^{\pm} (t + c) = x_{1}^{\pm} (t)$ for all $t \in \mathbb{R}$. 
+					\item[·] By the definitions of $x_{0}^{\pm}$ and $x_{1}^{\pm}$
+						$$
+							x_{0}^{-} (j \alpha ) \leq x_{j}^{0} \leq x_{0}^{+} ( j \alpha )
+						$$
+					and
+						$$
+							x_{1}^{-} (j \alpha ) \leq x_{j}^{1} \leq x_{1}^{+} ( j \alpha )
+						$$
+					\item[·] Hence $x^{0}$ and $x^{1}$ could only cross id $c = 0$, i.e. if $x_{0}^{\pm} = x_{1}^{\pm}$. In this case $x^{0}$ and $x^{1}$ would be asymptotic since
+					
+						$$
+							\sum_{j \in \mathbb{Z}} | x_{j}^{1} - x_{j}^{0} | \leq \sum_{j \in \mathbb{Z}}  ( x_{0}^{+} (j \alpha) - x_{0}^{-} (j \alpha) ) \leq x_{0}^{+} (1) - x_{0}^{+} (0) = 1
+						$$
+					\item[·] According to Lemma 2, $x^{0}$ and $x^{1}$ do not cross.
+				\end{itemize}
+		\end{itemize}
 	
 	\noindent $\spadesuit$
 \color{black}
 
+\noindent \textbf{Important consequences of Theorem 5}: these provide a picture of $\mathcal{M}_{\alpha}$ for $\alpha$ irrational.
+
+	\begin{itemize}
+		\item[T5.1 )] There exists a circle map $f \in \bar{G_{+}}$ with $\bar{\alpha} (f) = \alpha$ and a closed $f$-invariant set $A \subseteq \mathbb{R}$ such that $\mathcal{M}_{\alpha}$ consists of the orbits  of $f$ contained in $A_{\alpha}$; i.e. $x \in \mathcal{M}_{\alpha}$ if and only if $x_0 \in A_{\alpha}$ and $x_i = f^{i} (x_0) \ (\forall i \in \mathbb{Z})$. The projection $p_0$ maps $\mathcal{M}_{\alpha}$ homeomorphically onto $A_{\alpha}$.
+		
+		\item[T5.2] $x \in \mathcal{M}_{\alpha}$ is recurrent if and only if $x_0$ is a recurrent point for $f$, i.e. $p_0 ( \mathcal{M}_{\alpha}^{\text{rec}} ) = Rec(f)$. There are a few alternatives:
+			\begin{itemize}
+				\item[(a)] $Rec(f) = \mathbb{R}$.
+				\item[(b)] $Rec(f)$ is a Cantor set. In this case we also have different kinds of trayectories:
+					\begin{itemize}
+						\item[(b.1)] Trajectories that can be approximated by elements of $\mathcal{M}_{\alpha}^{\text{rec}}$ from above and from below.
+						\item[(b.2)] Trajectories that can be approximated by elements of $\mathcal{M}_{\alpha}^{\text{rec}}$ only from above.
+						\item[(b.3)] Trajectories that can be approximated by elements of $\mathcal{M}_{\alpha}^{\text{rec}}$ only from below.
+					\end{itemize}
+			\end{itemize}
+		
+		
+		\item[T5.3 )] Suppose that $\mathcal{M}_{\alpha}^{\text{rec}}$ is homeomorphic to a Cantor set. We define:
+			
+			$$
+				a_{\alpha} := \max{  
+				\{ | x_i - x_{i}^{*} | : x \in \mathcal{M}_{\alpha}^{\text{rec}} \ \text{ and } \ x^{*} \in \mathcal{M}_{\alpha}^{\text{rec}}	 \ \text{ asymptotic }, \ i \in \mathbb{Z}			 \}
+				}
+			$$
+			
+			If $y, z \in \mathcal{M}_{\alpha}^{\text{rec}}$ are not asymptotic and $y < z$ then
+			
+			$$
+				\inf{( z_i - y_i )} > 0, \ \limsup_{i \rightarrow \infty } (z_i - y_i) > a_{\alpha}, \ \text{ and } \  \limsup_{i \rightarrow - \infty } (z_i - y_i) > a_{\alpha}
+			$$
+		\item[T5.4 )] Every $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ can be approximated by periodic minimal trajectories.
+
+
+	\end{itemize}
 
 \subsection{Structure of the set of minimal trajectories with rational rotation number}
 
@@ -304,7 +520,28 @@ DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
 \color{blue}
 	\noindent \underline{\textbf{\textit{proof:}}} 		
 
-	ESTO ES LARGO DE COJONES! MUHAHAHAHAHA
+		\begin{itemize}
+			\item[-] According with Theorem 1 we have $\mathcal{M}_{\alpha}^{\text{rec}} \neq \O$.
+			\item[-] We also know that every $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ has a minimal period $(q, p)$. 
+			\item[-] We know that $\mathcal{M}_{\alpha}^{\text{rec}}$ is totally ordered.
+			\item[-] By contradiction, assume that exists $x \in P_{(q, p)}$ and $x^{*} \in \mathcal{M}_{\alpha}^{\text{rec}}$ such that
+				$$
+					\epsilon := H ( x_{0}^{*}, \cdots, x_{q}^{*} ) - H ( x_{0}, \cdots, x_{q} ) > 0
+				$$
+				\begin{itemize}
+					\item[·] Choose $n \in \mathbb{N}$ so large that
+						$$
+							n \epsilon > H(x_{0}^{*} - x_1) - H(x_0, x_1) + H(x_{q - 1}, x_{q}^{*}) - H(x_{q - 1}, x_q)
+						$$
+					\item[·] Using $H ( x_{q - 1}, x_{q}^{*}) = H ( x_{nq - 1}, x_{nq}^{*})$ and $H ( x_{q - 1}, x_{q}) = H ( x_{nq - 1}, x_{nq})$ we obtain
+						$$
+							H(x_{0}^{*}, x_1, \cdots, x_{nq - 1}, x_{nq}^{*}) < H( x_0, x_1, \cdots, x_{nq - 1}, x_{nq}) + n \epsilon = H (x_{0}^{*}, \cdots, x_{nq}^{*})
+						$$
+						
+						and this contradicts the minimality of $x^{*}$.
+						
+				\end{itemize}
+		\end{itemize}
 	
 	\noindent $\spadesuit$
 \color{black}
@@ -314,9 +551,9 @@ DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
 %% CONCLUSIONS %%
 %% =========== %%	
 		
-\section{Conclusions}
-		
-\cite{R1}
+%\section{Conclusions}
+
+
 
 
 
@@ -327,7 +564,11 @@ DEFINIMOS AQWUI LO QUE VIENE A SER EL ROTACIONAL MUHAHAHAHHHA
 %% =========== %%
 \newpage		
 \begin{thebibliography}{X}
-\bibitem{R1} bal bla bla bla
+
+\bibitem{R1} V. Banget. `Mather sets for twist maps and geodesic on tori''.
+\bibitem{R2} Y. Katznelson, D.S. Ornstein. ``Twist Maps and Aubry-Mather Sets''.
+\bibitem{R3} A. Katok, B. Hasselblatt. ``Introduction to the Modern Theory of Dynomical Systems''.
+
 \end{thebibliography}
 		
 		
@@ -479,7 +720,7 @@ $\mathbb{R} \times (0, 1)$.
 	\noindent $\spadesuit$
 \color{black}
 
-\noindent \textbf{Observation}: all this resoults are true (except the Lypschitz continuity in the Theorem 1) are also true if we relax the conditions of first definition (on a monotone twist map $\varphi$) in the following way:
+\noindent \textbf{Observation}: all this results are true (except the Lypschitz continuity in the Theorem 1) are also true if we relax the conditions of first definition (on a monotone twist map $\varphi$) in the following way:
 
 \begin{itemize}
 	\item[(a)] It is sufficient that $\varphi$ is a homeomorphism instead of being a $\mathcal{C}^{1}$-diffeomorphism.

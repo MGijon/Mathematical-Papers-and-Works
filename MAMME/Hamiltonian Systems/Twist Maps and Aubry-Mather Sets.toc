@@ -1,6 +1,5 @@
 \contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}First definitions and resoults}{2}
-\contentsline {section}{\numberline {3}Main resoults}{5}
-\contentsline {subsection}{\numberline {3.1}Structure of the set of minimal trajectories with irrational rotation number}{5}
-\contentsline {subsection}{\numberline {3.2}Structure of the set of minimal trajectories with rational rotation number}{5}
-\contentsline {section}{\numberline {4}Conclusions}{5}
+\contentsline {section}{\numberline {2}First definitions and results}{2}
+\contentsline {section}{\numberline {3}Main results}{7}
+\contentsline {subsection}{\numberline {3.1}Structure of the set of minimal trajectories with irrational rotation number}{7}
+\contentsline {subsection}{\numberline {3.2}Structure of the set of minimal trajectories with rational rotation number}{9}
