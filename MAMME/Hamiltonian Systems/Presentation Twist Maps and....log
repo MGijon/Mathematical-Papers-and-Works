@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.20)  11 MAY 2019 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.20)  12 MAY 2019 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,213 +660,6 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/beamer/multimedia.sty
-Package: multimedia 2012/05/02 ver 0.02
-\mm@movie=\count155
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/media9/media9.sty
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018/03/05 L3 programming layer (loader) 
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018/03/05 L3 programming layer (code)
-\c_max_int=\count156
-\l_tmpa_int=\count157
-\l_tmpb_int=\count158
-\g_tmpa_int=\count159
-\g_tmpb_int=\count160
-\g__intarray_font_int=\count161
-\g__prg_map_int=\count162
-\c_log_iow=\count163
-\l_iow_line_count_int=\count164
-\l__iow_line_target_int=\count165
-\l__iow_one_indent_int=\count166
-\l__iow_indent_int=\count167
-\c_zero_dim=\dimen190
-\c_max_dim=\dimen191
-\l_tmpa_dim=\dimen192
-\l_tmpb_dim=\dimen193
-\g_tmpa_dim=\dimen194
-\g_tmpb_dim=\dimen195
-\c_zero_skip=\skip57
-\c_max_skip=\skip58
-\l_tmpa_skip=\skip59
-\l_tmpb_skip=\skip60
-\g_tmpa_skip=\skip61
-\g_tmpb_skip=\skip62
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count168
-\c__fp_leading_shift_int=\count169
-\c__fp_middle_shift_int=\count170
-\c__fp_trailing_shift_int=\count171
-\c__fp_big_leading_shift_int=\count172
-\c__fp_big_middle_shift_int=\count173
-\c__fp_big_trailing_shift_int=\count174
-\c__fp_Bigg_leading_shift_int=\count175
-\c__fp_Bigg_middle_shift_int=\count176
-\c__fp_Bigg_trailing_shift_int=\count177
-\c__fp_rand_size_int=\count178
-\c__fp_rand_four_int=\count179
-\c__fp_rand_eight_int=\count180
-\l__sort_length_int=\count181
-\l__sort_min_int=\count182
-\l__sort_top_int=\count183
-\l__sort_max_int=\count184
-\l__sort_true_max_int=\count185
-\l__sort_block_int=\count186
-\l__sort_begin_int=\count187
-\l__sort_end_int=\count188
-\l__sort_A_int=\count189
-\l__sort_B_int=\count190
-\l__sort_C_int=\count191
-\l__tl_build_start_index_int=\count192
-\l__tl_build_index_int=\count193
-\l__tl_analysis_normal_int=\count194
-\l__tl_analysis_index_int=\count195
-\l__tl_analysis_nesting_int=\count196
-\l__tl_analysis_type_int=\count197
-\l__regex_internal_a_int=\count198
-\l__regex_internal_b_int=\count199
-\l__regex_internal_c_int=\count266
-\l__regex_balance_int=\count267
-\l__regex_group_level_int=\count268
-\l__regex_mode_int=\count269
-\c__regex_cs_in_class_mode_int=\count270
-\c__regex_cs_mode_int=\count271
-\l__regex_catcodes_int=\count272
-\l__regex_default_catcodes_int=\count273
-\c__regex_catcode_D_int=\count274
-\c__regex_catcode_S_int=\count275
-\c__regex_catcode_L_int=\count276
-\c__regex_catcode_O_int=\count277
-\c__regex_catcode_A_int=\count278
-\c__regex_all_catcodes_int=\count279
-\l__regex_show_lines_int=\count280
-\l__regex_min_state_int=\count281
-\l__regex_max_state_int=\count282
-\l__regex_left_state_int=\count283
-\l__regex_right_state_int=\count284
-\l__regex_capturing_group_int=\count285
-\l__regex_min_pos_int=\count286
-\l__regex_max_pos_int=\count287
-\l__regex_curr_pos_int=\count288
-\l__regex_start_pos_int=\count289
-\l__regex_success_pos_int=\count290
-\l__regex_curr_char_int=\count291
-\l__regex_curr_catcode_int=\count292
-\l__regex_last_char_int=\count293
-\l__regex_case_changed_char_int=\count294
-\l__regex_curr_state_int=\count295
-\l__regex_step_int=\count296
-\l__regex_min_active_int=\count297
-\l__regex_max_active_int=\count298
-\l__regex_replacement_csnames_int=\count299
-\l__regex_match_count_int=\count300
-\l__regex_min_submatch_int=\count301
-\l__regex_submatch_int=\count302
-\l__regex_zeroth_submatch_int=\count303
-\g__regex_trace_regex_int=\count304
-\c_empty_box=\box53
-\l_tmpa_box=\box54
-\l_tmpb_box=\box55
-\g_tmpa_box=\box56
-\g_tmpb_box=\box57
-\l__box_top_dim=\dimen196
-\l__box_bottom_dim=\dimen197
-\l__box_left_dim=\dimen198
-\l__box_right_dim=\dimen199
-\l__box_top_new_dim=\dimen256
-\l__box_bottom_new_dim=\dimen257
-\l__box_left_new_dim=\dimen258
-\l__box_right_new_dim=\dimen259
-\l__box_internal_box=\box58
-\l__coffin_internal_box=\box59
-\l__coffin_internal_dim=\dimen260
-\l__coffin_offset_x_dim=\dimen261
-\l__coffin_offset_y_dim=\dimen262
-\l__coffin_x_dim=\dimen263
-\l__coffin_y_dim=\dimen264
-\l__coffin_x_prime_dim=\dimen265
-\l__coffin_y_prime_dim=\dimen266
-\c_empty_coffin=\box60
-\l__coffin_aligned_coffin=\box61
-\l__coffin_aligned_internal_coffin=\box62
-\l_tmpa_coffin=\box63
-\l_tmpb_coffin=\box64
-\l__coffin_display_coffin=\box65
-\l__coffin_display_coord_coffin=\box66
-\l__coffin_display_pole_coffin=\box67
-\l__coffin_display_offset_dim=\dimen267
-\l__coffin_display_x_dim=\dimen268
-\l__coffin_display_y_dim=\dimen269
-\l__coffin_bounding_shift_dim=\dimen270
-\l__coffin_left_corner_dim=\dimen271
-\l__coffin_right_corner_dim=\dimen272
-\l__coffin_bottom_corner_dim=\dimen273
-\l__coffin_top_corner_dim=\dimen274
-\l__coffin_scaled_total_height_dim=\dimen275
-\l__coffin_scaled_width_dim=\dimen276
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count305
-))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count306
-\g__xparse_grabber_int=\count307
-\l__xparse_m_args_int=\count308
-\l__xparse_mandatory_args_int=\count309
-\l__xparse_v_nesting_int=\count310
-)
-Package: media9 2018/04/06 v0.92 acrobat-9/X compatible media
-\g_mix_pkgresizeflag_int=\count311
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/media9/pdfbase.sty
-Package: pdfbase 2018/04/06 v0.23 driver independent access to low-level PDF fe
-atures
-\g_pbs_page_int=\count312
-\g_pbs_oc_int=\count313
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/ocgx2/ocgbase.sty
-Package: ocgbase 2018/04/06 v0.13 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count314
-)
-\l_mix_poster_box=\box68
-\g_mix_wd_dim=\dimen277
-\g_mix_ht_dim=\dimen278
-\g_mix_dp_dim=\dimen279
-\g_mix_rmcnt_int=\count315
-\l_mix_viewcnt_int=\count316
-\g@mix@page@int=\count317
-\g_mix_resizeflag_int=\count318
-\l_mix_lineno_int=\count319
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \addmediapath with sig. 'm' on line 804.
-.................................................
-\l_mix_pbtn_box=\box69
-\mix@btn@dim=\dimen280
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \includemedia with sig. 'O{}mm' on line 1212.
-.................................................
-\g_mix_mbtncnt_int=\count320
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \mediabutton with sig. 'O{}m' on line 2418.
-.................................................
-)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 
@@ -880,20 +673,20 @@ sty))
 sty) (./Presentation Twist Maps and....aux)
 \openout1 = `"Presentation Twist Maps and....aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -931,16 +724,16 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen281
-\scratchbox=\box70
-\nofMPsegments=\count322
-\nofMParguments=\count323
+\scratchcounter=\count155
+\scratchdimen=\dimen190
+\scratchbox=\box53
+\nofMPsegments=\count156
+\nofMParguments=\count157
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen282
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen191
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -960,8 +753,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring OFF on input line 18.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring OFF on input line 19.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -969,68 +762,68 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
 
 (./Presentation Twist Maps and....out) (./Presentation Twist Maps and....out)
 \@outlinefile=\write5
 \openout5 = `"Presentation Twist Maps and....out"'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 19.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 18.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 18.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 18.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 18.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 18.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 18.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 18.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 18.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 18.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-8.
+9.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-18.
+19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 18.
+ut line 19.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1055,43 +848,29 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./Presentation Twist Maps and....nav)
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \end{frame}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
+) (./Presentation Twist Maps and....nav) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Presentation Twist Maps and....toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+(./Presentation Twist Maps and....toc) [2
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 5.
+line 63.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-)) [2
-
-] [3
+) [3
 
 ] [4
 
@@ -1100,61 +879,6 @@ thkerncmss.
 ] [6
 
 ] [7
-
-] [8
-
-] [9
-
-] [10
-
-] [11
-
-] [12
-
-] [13
-
-] [14
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 174.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 174.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 174.
-
-[15
-
-] [16
-
-] [17
-
-] [18
-
-]
-Overfull \vbox (15.77069pt too high) detected at line 272
- []
-
-[19
-
-]
-Overfull \vbox (15.77069pt too high) detected at line 272
- []
-
-[20
-
-] [21
-
-] [22
-
-] [23
-
-] [24
 
  </usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -1166,44 +890,40 @@ Overfull \vbox (15.77069pt too high) detected at line 272
 \tf@snm=\write8
 \openout8 = `"Presentation Twist Maps and....snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
  (./Presentation Twist Maps and....aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `"Presentation Twist Maps and...".out' has no
 t changed.
-(rerunfilecheck)             Checksum: D1FAAFD963C6A9CB8E99A992E7891BA2;402.
+(rerunfilecheck)             Checksum: 89C3D1E9B853F596F41082C64DFE1F7F;314.
  ) 
 Here is how much of TeX's memory you used:
- 26545 strings out of 492649
- 531341 string characters out of 6129622
- 589869 words of memory out of 5000000
- 29936 multiletter control sequences out of 15000+600000
- 546277 words of font info for 79 fonts, out of 8000000 for 9000
+ 17122 strings out of 492649
+ 329916 string characters out of 6129622
+ 401779 words of memory out of 5000000
+ 20586 multiletter control sequences out of 15000+600000
+ 14111 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,63p,10374b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,62p,826b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Presentation Twist Maps and....pdf" (24 pages, 213348 bytes)
-.
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Presentation Twist Maps and....pdf" (7 pages, 124858 bytes).
+
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 725 compressed objects within 8 object streams
- 58 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

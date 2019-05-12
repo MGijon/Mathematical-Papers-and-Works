@@ -4,54 +4,29 @@
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\sectionentry {1}{Working with maps}{3}{Working with maps}{0}}
+\headcommand {\sectionentry {1}{Introduction}{3}{Introduction}{0}}
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{0}{3}{5/6}{}{0}}
-\headcommand {\beamer@framepages {5}{6}}
-\headcommand {\slideentry {1}{0}{4}{7/7}{}{0}}
+\headcommand {\slideentry {1}{0}{3}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@sectionpages {3}{5}}
+\headcommand {\beamer@subsectionpages {3}{5}}
+\headcommand {\sectionentry {2}{Working with maps}{6}{Working with maps}{0}}
+\headcommand {\slideentry {2}{0}{1}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@sectionpages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\sectionentry {3}{Main results}{7}{Main results}{0}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{M.T. with irrational rotation number}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{7}{M.T. with rational rotation number}}
+\headcommand {\slideentry {3}{2}{1}{7/7}{M.T. with rational rotation number}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@sectionpages {3}{7}}
-\headcommand {\beamer@subsectionpages {3}{7}}
-\headcommand {\sectionentry {2}{Results}{8}{Results}{0}}
-\headcommand {\beamer@subsectionpages {8}{7}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{8}{Good news}}
-\headcommand {\slideentry {2}{1}{1}{8/8}{Good news}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {2}{1}{2}{9/9}{Good news}{0}}
-\headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionpages {8}{9}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{10}{Upper and lower bounds}}
-\headcommand {\slideentry {2}{2}{1}{10/11}{Upper and lower bounds}{0}}
-\headcommand {\beamer@framepages {10}{11}}
-\headcommand {\slideentry {2}{2}{2}{12/12}{Upper and lower bounds}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{2}{3}{13/14}{Upper and lower bounds}{0}}
-\headcommand {\beamer@framepages {13}{14}}
-\headcommand {\beamer@subsectionpages {10}{14}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{15}{$K_{15}$}}
-\headcommand {\slideentry {2}{3}{1}{15/16}{$K_{15}$}{0}}
-\headcommand {\beamer@framepages {15}{16}}
-\headcommand {\slideentry {2}{3}{2}{17/17}{$K_{15}$}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{3}{3}{18/18}{$K_{15}$}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{19}{Bipartite graphs}}
-\headcommand {\slideentry {2}{4}{1}{19/20}{Bipartite graphs}{0}}
-\headcommand {\beamer@framepages {19}{20}}
-\headcommand {\slideentry {2}{4}{2}{21/22}{Bipartite graphs}{0}}
-\headcommand {\beamer@framepages {21}{22}}
-\headcommand {\beamer@subsectionpages {19}{22}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{23}{To sum up}}
-\headcommand {\slideentry {2}{5}{1}{23/23}{To sum up}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {2}{5}{2}{24/24}{To sum up}{0}}
-\headcommand {\beamer@framepages {24}{24}}
-\headcommand {\beamer@partpages {1}{24}}
-\headcommand {\beamer@subsectionpages {23}{24}}
-\headcommand {\beamer@sectionpages {8}{24}}
-\headcommand {\beamer@documentpages {24}}
-\headcommand {\gdef \inserttotalframenumber {18}}
+\headcommand {\beamer@partpages {1}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\beamer@sectionpages {7}{7}}
+\headcommand {\beamer@documentpages {7}}
+\headcommand {\gdef \inserttotalframenumber {7}}

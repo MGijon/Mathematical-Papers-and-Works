@@ -1,7 +1,5 @@
-\beamer@sectionintoc {1}{Working with maps}{3}{0}{1}
-\beamer@sectionintoc {2}{Results}{8}{0}{2}
-\beamer@subsectionintoc {2}{1}{Good news}{8}{0}{2}
-\beamer@subsectionintoc {2}{2}{Upper and lower bounds}{10}{0}{2}
-\beamer@subsectionintoc {2}{3}{$K_{15}$}{15}{0}{2}
-\beamer@subsectionintoc {2}{4}{Bipartite graphs}{19}{0}{2}
-\beamer@subsectionintoc {2}{5}{To sum up}{23}{0}{2}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Working with maps}{6}{0}{2}
+\beamer@sectionintoc {3}{Main results}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{M.T. with irrational rotation number}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{M.T. with rational rotation number}{7}{0}{3}
