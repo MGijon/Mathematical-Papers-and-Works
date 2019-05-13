@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@sectionintoc {2}{Working with maps}{6}{0}{2}
-\beamer@sectionintoc {3}{Main results}{7}{0}{3}
-\beamer@subsectionintoc {3}{1}{M.T. with irrational rotation number}{7}{0}{3}
-\beamer@subsectionintoc {3}{2}{M.T. with rational rotation number}{7}{0}{3}
+\beamer@sectionintoc {3}{Main results}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{M.T. with irrational rotation number}{16}{0}{3}
+\beamer@subsectionintoc {3}{2}{M.T. with rational rotation number}{17}{0}{3}

@@ -105,7 +105,7 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 
 \noindent \textbf{Definition 2}: \textbf{Convergence} of a sequence $x^n \in \mathbb{R}^{\mathbb{Z}}$ to $x \in \mathbb{R}^{\mathbb{Z}}$ means that $\lim_{n \rightarrow \infty } x_{i}^{n} = x_{i} \ \ (\forall i \in \mathbb{Z})$.
 		
-\noindent Given a dunction $H: \mathbb{R}^2 \rightarrow \mathbb{R}$ we can extend H to trajectories (or finite segments) by:
+\noindent Given a function $H: \mathbb{R}^2 \rightarrow \mathbb{R}$ we can extend H to trajectories (or finite segments) by:
 	$$
 		H (x_j, \cdots, x_k) = \sum_{i = j}^{k - 1} H ( x_i, x_{i + 1} ) 
 	$$
@@ -127,7 +127,7 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 	\item[(H1)] \textit{Periodicity condition}: $ \forall (\xi, \eta) \in \mathbb{R}^{2}: \ H( \xi + 1, \eta + 1) = H(\xi, \eta)$.
 	\item[(H2)] \textit{Condition at infinity}: $\lim_{|\eta | \rightarrow \infty } H (\xi, \xi + \eta) = \infty$ uniformly in $\xi$.
 	\item[(H3)] \textit{Ordering condiction}: If $\xi_{*} < \xi^{*}, \eta_{*} < \eta^{*} \Rightarrow H( \xi_{*}, \eta_{*}) + H( \xi^{*}, \eta^{*}) < H( \xi_{*}, \eta^{*}) + H( \xi^{*}, \eta_{*})$.
-	\item[(H4)] \textit{Transversality condiction}: If $(x_{-1}, x_{0}, x_{1}) \neq (x_{-1}^{*}, x_{0}^{*}, x_{1}^{*})$ are minimal and $x_0 = x_{0}^{*}$ then $(x_{-1} - x_{-1}^{*})(x_{1} - x_{-1}^{*}) < 0$.
+	\item[(H4)] \textit{Transversality condiction}: If $(x_{-1}, x_{0}, x_{1}) \neq (x_{-1}^{*}, x_{0}^{*}, x_{1}^{*})$ are minimal and $x_0 = x_{0}^{*}$ then $(x_{-1} - x_{-1}^{*})(x_{1} - x_{1}^{*}) < 0$.
 \end{itemize}  
 
 \noindent \textbf{Definition 4}: If $H \in \mathcal{C}^{2}$ we say that $x \in \mathbb{R}^{\mathbb{Z}}$ is \textbf{stationary} if:
@@ -157,7 +157,7 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 	\end{itemize}
 
 
-\noindent There is an action T on the group $\mathbb{Z}^2$ on $\mathbb{R}^{\mathbb{Z}}$ by order-preserving homeomorphisms: if $(a, b) \in \mathbb{Z}^{2}$ and $x \in \mathbb{R}^{\mathbb{Z}}$ then:
+\noindent There is an action T of the group $\mathbb{Z}^2$ on $\mathbb{R}^{\mathbb{Z}}$ by order-preserving homeomorphisms: if $(a, b) \in \mathbb{Z}^{2}$ and $x \in \mathbb{R}^{\mathbb{Z}}$ then:
 
 	$$
 		T_{(a, b)} x = x^{*} \ \ \text{  where  } x^{*}_{i} = x_{i - a} + b
@@ -165,7 +165,7 @@ Twist Maps and Aubry-Mather Sets, Hamiltonian Systems, MAMME}
 
 The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subseteq \mathbb{R}^{2}$ by $(a, b)$.
 
-\noindent \textbf{Definition 8}: $x \in \mathbb{R}^{\mathbb{Z}}$ is periodic with period $(q, p) \in \big( \mathbb{Z} - \{ 0 \} \big) \times \mathbb{Z}$ if $T_{(a, b)} x = x$.
+\noindent \textbf{Definition 8}: $x \in \mathbb{R}^{\mathbb{Z}}$ is periodic with period $(q, p) \in \big( \mathbb{Z} - \{ 0 \} \big) \times \mathbb{Z}$ if $T_{(q, p)} x = x$.
 
  
 \noindent \textbf{Consecuences of the hypotesis}:
@@ -335,7 +335,7 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 \noindent \textbf{Notation 2}:
 \begin{itemize}
 	\item[-]  Let $G_{+}$ denote the group of orientation-preserving homeomorphisms of the circle $S^{1} = \mathbb{R} / \mathbb{Z}$.
-	\item[-] $\bar{G_{+}} = \{ f | f : \mathbb{R} \rightarrow \mathbb{R} \ \text{  continuous, strictly increasing, } \ f(x+ 1) = f(x) + 1 \}$
+	\item[-] $\bar{G_{+}} = \{ f | f : \mathbb{R} \rightarrow \mathbb{R} \ \text{  continuous, strictly increasing, } \ f(x+ 1) = f(x) + 1 \}$.
 \end{itemize}
 
 \noindent \textbf{Theorem 3}: For every $x \in \mathcal{M}$ there exists a a circle map $f \in \bar{G_{+}}$ such that $x_{i + 1} = f (x_i) \ \ (\forall i \in \mathbb{Z})$.
@@ -352,10 +352,10 @@ The action of $T_{(a, b)}$ on $x$ corresponds to translation of graph(x) $\subse
 	\noindent $\spadesuit$
 \color{black}
 
-\noindent \textbf{Definition 9}:Let $\varphi \in G_{+}$. The \textbf{Poincar\'e rotation number} $\alpha( \varphi) \in S^{1}$ can be interpreted geometrically as the ``average angle'' by which $\varphi$ rotates $S^{1}$.
+\noindent \textbf{Definition 9}: Let $\varphi \in G_{+}$. The \textbf{Poincar\'e rotation number} $\alpha( \varphi) \in S^{1}$ can be interpreted geometrically as the ``average angle'' by which $\varphi$ rotates $S^{1}$.
 
 
-\noindent \textbf{Observation 3}: homeomorphisms $\varphi \in G_{+}$ with $\alpha ( \varphi )$ irrational digger radically from those with rational $\alpha ( \varphi )$.
+\noindent \textbf{Observation 3}: homeomorphisms $\varphi \in G_{+}$ with $\alpha ( \varphi )$ irrational differ radically from those with rational $\alpha ( \varphi )$.
 \begin{itemize}
 	\item[-] We have $\alpha ( \varphi ) \in \mathbb{Q} / \mathbb{Z}$ if and only if \textit{$\varphi$ has a periodic point}.
 	\item[-] If $\alpha ( \varphi )$ is irrational the limit set of every orbit $ \{ \varphi^{i} (z) | i \in \mathbb{Z} \}$ is the unique smallest closed non-empty $\varphi$-invariant subset of $S^{1}$, i.e. the unique minimal set of $\varphi$. We denote it $Rec(\varphi)$ and the points $z \in Rec(\varphi)$ are called \textbf{recurrent}.

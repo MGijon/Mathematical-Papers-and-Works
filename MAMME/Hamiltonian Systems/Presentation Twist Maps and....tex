@@ -49,15 +49,14 @@
 \section{Introduction}
 
 \begin{frame}{1}
-    \frametitle{}
    
   	\begin{itemize}
-  		\item[-] We will be working with \textbf{area-preserving monotone twist maps} preserving the boundary components
+  		\item We will be working with \textbf{area-preserving monotone twist maps} preserving the boundary components
 			$$
 				\varphi: S^{1} \times [0, 1] \longrightarrow S^{1} \times [0, 1]
 			$$
-		\item[-] The \textbf{Mather sets} will be a particular $\varphi$-invariant subsets of the cylinder.
-		\item[-] We want to find $\varphi$-invariant closed curves which separates $S^{1} \times \{ 0 \}$ and $S^{1} \times \{ 1 \}$. They are related with the stability of the system $\{ \varphi^{n} \}_{n \in \mathbb{N}}$.	
+		\item The \textbf{Mather sets} will be a particular $\varphi$-invariant subsets of the cylinder.
+		\item We want to find $\varphi$-invariant closed curves which separates $S^{1} \times \{ 0 \}$ and $S^{1} \times \{ 1 \}$. They are related with the stability of the system $\{ \varphi^{n} \}_{n \in \mathbb{N}}$.	
   	\end{itemize}
 
 \end{frame}
@@ -70,8 +69,8 @@
 \begin{frame}{3}
     \frametitle{Relationship with KAM theory}
    	\begin{itemize}
-   		\item[-] KAM-Theory for this kind of maps shows that for this kind of maps which are sufficiently $\mathcal{C}^{k}$-close to an integrable one, then many of the invariant curves persists. The invariant curves are destroyed when we go too far away from the integrable situation and the Mather sets, $M_{\alpha}$ re the most important remmants of the invariant curves of irrational rotation number $\alpha$.
-   		\item[-] The Aubry-Mather theory appears to explain what happend with perturbed systems and its main contribution is to explain what happend with the orbits in the cases that are not covered by KAM theory.
+   		\item KAM-Theory for this kind of maps shows that for this kind of maps which are sufficiently $\mathcal{C}^{k}$-close to an integrable one, then many of the invariant curves persists. The invariant curves are destroyed when we go too far away from the integrable situation and the Mather sets, $M_{\alpha}$ re the most important remmants of the invariant curves of irrational rotation number $\alpha$.
+   		\item The Aubry-Mather theory appears to explain what happend with perturbed systems and its main contribution is to explain what happend with the orbits in the cases that are not covered by KAM theory.
    	\end{itemize}
 \end{frame}
 
@@ -82,28 +81,158 @@
 \section{Working with maps}
 
 \begin{frame}{4}
-	\frametitle{}
 	\begin{itemize}
-		\item[-] \textbf{Trajectory}: $x = (x_{i})_{i \in \mathbb{Z}} \in \mathbb{R}^{\mathbb{Z}}$.
-		\item[-] \textbf{Convergence} is the obvious notion (with the product topology) for each $i$.
-		\item[-] Given a function $H:\mathbb{R}^{2} \rightarrow \mathbb{R}$ we can extend it to trajectories (or finite segments) by:
+		\item \textbf{Trajectory}: $x = (x_{i})_{i \in \mathbb{Z}} \in \mathbb{R}^{\mathbb{Z}}$.
+		\item \textbf{Convergence} is the obvious notion (with the product topology) for each $i$.
+		\item Given a function $H:\mathbb{R}^{2} \rightarrow \mathbb{R}$ we can extend it to trajectories (or finite segments) by:
 			$$
 				H(x_j, \cdots, x_k) = \sum_{i = j}^{k - 1} H(x_{i}, x_{i + 1})
 			$$
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{5}
+	\begin{itemize}
+		\item A segment $(x_j, \cdots, x_k)$ is \textbf{minimal} with respect to H if:
+			$$
+				H(x_j, \cdots, x_k) \leq H(x_{j}^{*}, \cdots, x_{k}^{*}) \ \ (\forall (x_{j}^{*}, \cdots, x_{k}^{*}) : x_j = x_{j}^{*}, x_k = x_{k}^{k} )
+			$$
+		\item A trajectory is minimal if every segment on it is minimal.
+		\item $\mathcal{M} = \mathcal{M} (H)$ is the set of all minimal trajectories with respect to H.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{6}
+	\frametitle{Hipotesis for H}
+	We assume H is continuous and also:
+	\begin{itemize}
+		\item[(H1)] \textbf{Periodicity condition}: $H(\xi + 1, \eta + 1) ) H(\xi, \eta) \ \ (\forall (\xi, \eta) \in \mathbb{R}^{2})$
+		\item[(H2)] \textbf{Condition at infinity}: $\lim_{|\eta| \rightarrow \infty } H(\xi, \xi + \eta) = \infty$ uniformly in $\xi$.
+		\item[(H3)] \textbf{Ordering condiction}: $\xi_{*} < \xi^{*}, \eta_{*} < \eta^{*} \Rightarrow $
+			$$
+				H(\xi_{*}, \eta_{*}) + H(\xi^{*}, \eta^{*}) < H(\xi_{*}, \eta^{*}) + H(\xi^{*}, \eta_{*})
+			$$
+		\item[(H4)] \textbf{Transversality condiction}: if $(x_{-1}, x_0, x_1) \neq (x_{-1}^{*}, x_{0}^{*}, x_{1}^{*})$ are minimal and $x_0 = x_{0}^{*}$ then
+			$$
+				(x_{-1} - x_{-1}^{*})(x_{1} - x_{1}^{*}) < 0
+			$$
+	\end{itemize}
+\end{frame}
  
+\begin{frame}{7}
+	\begin{itemize}
+		\item $H \in \mathcal{C}^{2}$, we say that $x \in \mathbb{R}^{\mathbb{Z}}$ is \textbf{stationary} if 
+			$$
+				D_2 (x_{i - 1}, x_i) + D_1 (x_{i}, x_{i + 1}) = 0 \ \ (\forall i \in \mathbb{Z}) 
+			$$
+		\item If $x \in \mathcal{M}(H)$ then $x$ is stationary.
+		\item We say that $\mathbb{R}^{\mathbb{Z}}$ is \textbf{partially ordered} by $x < x^{*}$ if $x_{i} < x^{*}_{i} \ (\forall i \in \mathbb{Z})$.
+		\item $x, y \in \mathbb{R}^{\mathbb{Z}}$ \textbf{cross}:
+			\begin{itemize}
+				\item[(a)] at $i \in \mathbb{Z}$ if $x_i = y_i$ and $(x_{i - 1} - y_{i - 1}) (x_{i + 1} - y_{i + 1}) < 0$.
+				\item[(b)] between $i$ and $i + 1$ if $(x_{i} - y_{i}) (x_{i + 1} - y_{i + 1}) < 0$.
+			\end{itemize}
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\begin{itemize}
+		\item We define the action T of the group $\mathbb{Z}^{2}$ on $\mathbb{R}^{2}$ by order-preserving homeomorphisms: ($x \in \mathbb{R}^{\mathbb{Z}}$, $(a, b) \in \mathbb{Z}^{2}$)
+			$$
+				T_{(a, b)} x = x*, \ \ \text{where} \ \ x^{*}_{i} = x_{i - a} + b
+			$$
+		The action correspons to a translation of $graph(x) \subset \mathbb{R}^{2}$.
+		\item $x \in \mathbb{R}^{\mathbb{Z}}$ is \textbf{periodic} with period $(q, p) \in \big( \mathbb{Z} - \{ 0 \} \big) \times \mathbb{Z}$ if
+			$$
+				T_{(q, p)} x = x
+			$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\title{Lemma and proof (example)}
+	There are a lot of results that are required to arrive to the main ones that we are exposing. Due to the lack of time we expose here how to prove a simple one, just to show an example on how to work with maps.
+	
+	\begin{exampleblock}{Lemma}
+		Minimal trajectories cross at most once
+	\end{exampleblock}
+\end{frame}
+
 %% ======= %%
 %% RESULTS %%
 %% ======= %%
 
 \section{Main results}
 
+\begin{frame}
+	
+	\begin{itemize}
+	\item  Let $G_{+}$ denote the group of orientation-preserving homeomorphisms of the circle $S^{1} = \mathbb{R} / \mathbb{Z}$.
+	\item $\bar{G_{+}} = \{ f | f : \mathbb{R} \rightarrow \mathbb{R} \ \text{  continuous, strictly increasing, } \ f(x+ 1) = f(x) + 1 \}$.
+	\item \textbf{Theorem}: For every $x \in \mathcal{M}$ there exists a a circle map $f \in \bar{G_{+}}$ such that $x_{i + 1} = f (x_i) \ \ (\forall i \in \mathbb{Z})$.
+	\item Let $\varphi \in G_{+}$. The \textbf{Poincar\'e rotation number} $\alpha( \varphi) \in S^{1}$ can be interpreted geometrically as the ``average angle'' by which $\varphi$ rotates $S^{1}$.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Theorems}
+	
+	Homeomorphisms $\varphi \in G_{+}$ with $\alpha ( \varphi )$ irrational differ radically from those with rational $\alpha ( \varphi )$.
+	\begin{itemize}
+		\item[-] We have $\alpha ( \varphi ) \in \mathbb{Q} / \mathbb{Z}$ if and only if \textit{$\varphi$ has a periodic point}.
+	\item[-] If $\alpha ( \varphi )$ is irrational the limit set of every orbit $ \{ \varphi^{i} (z) | i \in \mathbb{Z} \}$ is the unique smallest closed non-empty $\varphi$-invariant subset of $S^{1}$, i.e. the unique minimal set of $\varphi$. We denote it $Rec(\varphi)$ and the points $z \in Rec(\varphi)$ are called \textbf{recurrent}.
+	\begin{itemize}
+		\item[(i)] Every orbit is dense in $S^{1}$, i.e. $Rec(\varphi) = S^1$. Theis is the case if and only if exists an $h \in G_{+}$ such that $h \circ \varphi \circ h^{-1}$ is a rotation by $\alpha ( \varphi)$.
+		\item[(ii)] $Rec(\varphi)$ is a Cantor set.
+		\end{itemize}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item \textbf{Theorem}: $\forall \alpha \in \mathbb{R}$ the set $\mathcal{M}_{\alpha} := \{ x \in \mathcal{M} | \alpha(x) \} = \alpha$ is not empty.
+		\item $\mathcal{M}_{\alpha}$ can be describe by a single circle map, and in particular, every $\bar{B_{x}} \subseteq \mathcal{M}_{\alpha}$ contains the set $\mathcal{M}_{\alpha}^{\text{rec}}$ of \textbf{recurrent trajectories} in $\mathcal{M}_{\alpha}$, 
+
+	$$
+		\mathcal{M}_{\alpha}^{\text{rec}} := \{ x \in \mathcal{M}_{\alpha} | \exists k_i \in \big( \mathbb{Z}^{2} - \{ 0 \}       \big) \ \text{ such that } \ x = \lim_{i \rightarrow \infty } T_{k_i} x \}
+	$$
+\end{itemize}		
+	
+	
+\end{frame}
+
 \subsection{M.T. with irrational rotation number}
 
+\begin{frame}
+	\frametitle{Irrational rotation number}
+	
+	\begin{block}{Theorem}
+		Suppose $\alpha$ is irrational. Then $\mathcal{M}_{\alpha}$ is totally ordered.
+	\end{block}
+\end{frame}
 
 \subsection{M.T. with rational rotation number}
 
+\begin{frame}
+	\frametitle{Rational rotation number}
+	
+	\begin{itemize}
+		\item[-] $P_{q, p} := \{ x \in \mathbb{R}^{\mathbb{Z}} | T_{(q, p)} x = x \}$.
+		\item[-] $H_{q, p} := H(x_0, \cdots, x_q)$.
+	\end{itemize}
+	
+	\begin{block}{Theorem}
+		$\mathcal{M}_{\alpha}^{\text{rec}}$ is non-empty, closed and totally ordered. Every $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ has a minimal period $(q, p)$. If $x \in \mathcal{M}_{\alpha}^{\text{rec}}$ then $x$ is a minimun of $H_{q, p}: P_{q, p} \rightarrow \mathbb{R}$, in particular $H_{q, p}^{\text{min}} \ (\forall x \in \mathcal{M}_{\alpha}^{\text{rec}} )$.
+	\end{block}
+\end{frame}
 
 %% =========== %%
 %% BIBLIOGRAPHY %%
